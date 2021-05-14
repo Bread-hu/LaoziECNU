@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>emplist</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>
+      ID
+    </td>
+    <td>
+      Name
+    </td>
+    <td>
+      Salary
+    </td>
+    <td>
+      Age
+    </td>
+    <td>
+      Birth
+    </td>
+    <td>
+      Operation
+    </td>
+  </tr>
+  <tr class="row1" th:each="emp:${emps}">
+    <td>
+      <span th:text="${emp.id}"></span>
+    </td>
+    <td>
+      <span th:text="${emp.name}"></span>
+    </td>
+    <td>
+      <span th:text="${emp.salary}"></span>
+    </td>
+    <td>
+      <span th:text="${emp.age}"></span>
+    </td>
+    <td>
+      <!--日期格式化-->
+      <span th:text="${#dates.format(emp.bir,'yyyy-MM-dd')}"></span>
+    </td>
+
+    <td>
+      <a th:href="@{/emp/delete(id=${emp.id})}">删除信息</a>&nbsp;
+      <a th:href="@{/emp/find(id=${emp.id})}">修改信息</a>
+    </td>
+  </tr>
+
+</table>
+<p>
+  <input type="button" class="button" value="添加员工" onclick="location.href='/ems/toSave'"/>
+</p>
+</body>
+</html>

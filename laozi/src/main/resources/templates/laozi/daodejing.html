@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>daodejing</title>
+</head>
+<body>
+<nav>
+    <a href="/index">首页</a>
+    <a href="">成语</a>
+    <a href="">作者</a>
+    <a href="">文献</a>
+    <a href="">时空间GIS</a>
+    <a href="">知识图谱</a>
+    <a href="/laozi/daodejing">老子</a>
+</nav>
+<nav>
+    <a href="/laozi/daodejing">道德经</a>
+    <a href="translation">译本</a>
+    <a href="idiom">成语</a>
+    <a href="statistics">统计</a>
+</nav>
+<div class="div-left">
+    <ul>
+        <li>道经
+            <ul id="dao_list">
+            </ul>
+        </li>
+        <li>德经
+            <ul id="de_list">
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="div-right">
+    <h>正文</h>
+    <p id="original"></p>
+    <h>译文</h>
+    <p id="translation"></p>
+    <h>注释</h>
+    <p id="annotation"></p>
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    var daolist_str = "";
+    for (i = 1; i <= 37; i++) {
+        daolist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
+        // daolist_str += "<li><button onclick=\"sayHello(" + i + ")\">第" + i + "章</button></li>";
+    }
+    document.getElementById("dao_list").innerHTML = daolist_str;
+
+    var delist_str = ""
+    for (i = 38; i <= 81; i++) {
+        delist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
+    }
+    document.getElementById("de_list").innerHTML = delist_str;
+
+    function selectChapter(chapter) {
+        $.ajax({
+            type: "post",
+            url: "/laozi/getDaodejing",
+            data: {chapter: chapter},
+            success:function (result) {
+                document.getElementById("original").innerHTML=result.getOriginal();
+                document.getElementById("translation").innerHTML=result.getTranslation();
+                document.getElementById("annotation").innerHTML=result.getAnnotation();
+            },
+            error:function(msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    function  sayHello(chapter){
+        document.getElementById("original").innerHTML="hello"+chapter;
+
+    }
+</script>
