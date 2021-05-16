@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface DaodejingDao {
 
-    @Select("SELECT * FROM daodejing WHERE `chapter`=#{chapter}")
+    @Select("SELECT * FROM daodejing WHERE chapter=#{chapter}")
     public Daodejing getByChapter(int chapter);
 
 }

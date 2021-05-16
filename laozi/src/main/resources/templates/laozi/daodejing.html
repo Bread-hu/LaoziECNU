@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>daodejing</title>
-    <script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <nav>
@@ -66,10 +66,9 @@
             url: "/laozi/getDaodejing",
             data: {chapter: chapter},
             success:function (result) {
-                document.getElementById("original").innerHTML=result;
-                // document.getElementById("original").innerHTML=result.getOriginal();
-                // document.getElementById("translation").innerHTML=result.getTranslation();
-                // document.getElementById("annotation").innerHTML=result.getAnnotation();
+                document.getElementById("original").innerHTML=result.original;
+                document.getElementById("translation").innerHTML=result.translation;
+                document.getElementById("annotation").innerHTML=result.annotation;
             },
             error:function(msg) {
                 console.log(msg)

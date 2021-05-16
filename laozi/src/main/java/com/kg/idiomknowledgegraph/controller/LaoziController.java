@@ -1,5 +1,6 @@
 package com.kg.idiomknowledgegraph.controller;
 
+import com.kg.idiomknowledgegraph.bean.Daodejing;
 import com.kg.idiomknowledgegraph.service.LaoziService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,10 +22,8 @@ public class LaoziController {
 
     @PostMapping("/getDaodejing")
     @ResponseBody
-    public String getContentByChapter(int chapter){
-        System.out.println("hello");
-        System.out.println(chapter);
-//        return laoziService.getDaodejing(chapter);
-        return "hello";
+    public Daodejing getContentByChapter(int chapter){
+        return laoziService.getDaodejing(chapter);
     }
+
 }

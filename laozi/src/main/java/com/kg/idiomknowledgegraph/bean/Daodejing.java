@@ -6,6 +6,13 @@ public class Daodejing {
     private String translation;
     private String annotation;
 
+    public Daodejing(int chapter, String original, String translation, String annotation) {
+        this.chapter = chapter;
+        this.original = original;
+        this.translation = translation;
+        this.annotation = annotation;
+    }
+
     public int getChapter() {
         return chapter;
     }
@@ -38,4 +45,13 @@ public class Daodejing {
         this.annotation = annotation;
     }
 
+    @Override
+    public String toString() {
+        return "Daodejing{" +
+                "chapter=" + chapter +
+                ", original='" + original + '\'' +
+                ", translation='" + translation + '\'' +
+                ", annotation='" + annotation + '\'' +
+                '}';
+    }
 }
