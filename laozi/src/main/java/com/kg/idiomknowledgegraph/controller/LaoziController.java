@@ -20,7 +20,7 @@ public class LaoziController {
         return "laozi/daodejing";
     }
 
-    @PostMapping("/getDaodejing")
+    @PostMapping("/daodejing")
     @ResponseBody
     public Daodejing getContentByChapter(int chapter){
         return laoziService.getDaodejing(chapter);

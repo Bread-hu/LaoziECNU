@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('成语知识图谱')}">
 </head>
 <body>
-<nav>
-    <a href="/index">首页</a>
-    <a href="">成语</a>
-    <a href="">作者</a>
-    <a href="">文献</a>
-    <a href="">时空间GIS</a>
-    <a href="">知识图谱</a>
-    <a href="/laozi/daodejing">老子</a>
-    <span ></span>
-</nav>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<div class="index-container">
+	<div class="swiper-slide swiper-slide-active" style="background-color: #d5e8d1;background-repeat: no-repeat;
+	                      min-height: 836px;height: auto;  background-size: cover; width:100%;">
+		<div class="a_href">
+			<a href="./chengyu" style="font-size: x-large;padding-left: 20%"  ><b>成语</b></a>
+			<a href="./author" style="font-size: x-large;padding-left: 5%"><b>作者</b></a>
+			<a href="./literature" style="font-size: x-large;padding-left: 5%"><b>文献</b></a>
+			<a href="./st_gis" style="font-size: x-large;padding-left: 5%"><b>时空间GIS</b></a>
+			<a href="./knowledge_graph" style="font-size: x-large;padding-left: 5%"><b>知识图谱</b></a>
+			<a href="./laozi/daodejing" style="font-size: x-large;padding-left: 5%"><b>老子</b></a>
+		</div>
+
+		<div class="banner2" style="overflow: hidden;">
+			<div class="search">
+				<div class="search-box">
+					<div class="search-select" id="sp">
+						<select id="select_1">
+							<option>成语</option>
+							<option>作者</option>
+							<option>文献</option>
+							<option>图谱</option>
+							<option>老子</option>
+						</select>
+					</div>
+					<input  type="text" class="search_input" autocomplete="off" placeholder="请输入检索的成语、作者或文献" id="keyword" name="keyword">
+					<a id="btnSearch" class="search_btn" onclick="fun()"></a>
+				</div>
+				<a class="advanced_search_btn" onclick="fun()">搜索</a>
+			</div>
+		</div>
+    </div>
+</div>
+<div th:insert="~{common::footbar}"></div>
+
 </body>
 </html>
+
+<script>
+    var sp = "";
+    function fun() {
+        sp = $("#select_1").val();
+        keyword = $("#keyword").val();
+        if (keyword == "") {
+            alert("检索词不能为空！");
+        } else {
+            var form1 = document.createElement("form");
+            document.body.appendChild(form1);
+            // 创建一个输入
+            var input = document.createElement("input");
+            var inputs = document.createElement("input");
+            // 设置相应参数
+            input.type = "hidden";
+            input.name = "sp";
+            input.value = sp;
+            form1.appendChild(input);
+            inputs.type = "hidden";
+            inputs.name = "keyword";
+            inputs.value = keyword;
+            form1.appendChild(input);
+            form1.appendChild(inputs);
+            form1.method = "POST";
+            form1.action = "book_search";
+            form1.submit();
+        }
+    }
+</script>

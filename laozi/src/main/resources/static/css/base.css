@@ -1,0 +1,181 @@
+﻿/*默认样式--开始*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+*{box-sizing: border-box;}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size:16px;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol,li {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: middle;  
+    display:block;
+}
+a {
+    text-decoration: none;
+    cursor:pointer;
+}
+a:hover{
+    text-decoration:none;
+}
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+input, textarea {
+    outline: none;
+    border: none;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+}
+/*清除浮动*/
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+/*默认样式--结束*/
+
+.wd1180,.container{
+    width:1180px;
+    margin:auto;
+}
+/*头部公共样式*/
+.header{
+    color:#333;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+.header a{
+    color:#333;
+    line-height:50px;
+    height:50px;
+}
+.header a:hover{
+    color:#b81237;
+}
+.header span{
+    margin:0px 5px 0px 5px;
+}
+.login-index-mes div{
+    margin-left:20px;
+    float:left;
+}
+.login-index-mes div a{
+    float:left;
+}
+.login-index-mes div img{
+    float:left;
+    margin-right:10px;
+}
+.login-index-mes div.icon-header img{
+    border-radius:30px;
+    width:40px;
+    height:40px;
+    margin-top:5px;
+}
+.login-index-mes div.icon-mes{
+    position:relative;
+}
+.login-index-mes div.icon-mes img{
+    margin-top:14px;
+}
+.login-index-mes div.icon-mes span{
+    position:absolute;
+    left:8px;
+    top:10px;
+    border-radius:10px;
+    background-color:#cb2a19;
+    color:#fff;
+    width:15px;
+    height:15px;
+    font-size:10px;
+    text-align: center;
+}
+.login-index-mes div.icon-admin img{
+    margin-top:18px;
+}
+/*底部公共样式*/
+.footer{
+    height:130px;
+    width: 100%;
+    color:#fff;
+    background-color:#383838;
+    padding-top:30px;
+    bottom: 0px;
+    left: 0px;
+}
+/*底部公共样式*/
+.footer_absolute{
+    height:130px;
+    width: 100%;
+    color:#fff;
+    background-color:#383838;
+    padding-top:30px;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+}
+.footer img{
+    float:left;
+    margin-right: 20px;
+}
+.footer h5{
+    color:#999;
+    font-weight: bold;
+    font-size:13px;
+    padding-bottom:8px;
+}
+.footer p{
+    color:#666;
+    font-size:12px;
+    line-height:20px;
+}
+.nav{
+    color:#333;
+}
+.nav ul{
+    margin-top:-10px;
+}
+.nav ul li{
+    float:left;
+    color:#196dcb;
+    font-size:14px;
+}
+.nav ul li a{
+    display:block;
+    color:#333;
+}
+.nav ul li span{
+    color:#333;
+    margin:0px 5px 0px 5px;
+}

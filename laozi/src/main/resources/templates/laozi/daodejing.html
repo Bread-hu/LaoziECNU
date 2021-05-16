@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>daodejing</title>
-    <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('老子')}">
 </head>
 <body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
 <nav>
     <a href="/index">首页</a>
     <a href="">成语</a>
@@ -42,7 +42,7 @@
     <p id="annotation"></p>
 </div>
 
-
+<div th:insert="~{common::footbar}"></div>
 </body>
 </html>
 
@@ -63,7 +63,7 @@
     function selectChapter(chapter) {
         $.ajax({
             type: "post",
-            url: "/laozi/getDaodejing",
+            url: "/laozi/daodejing",
             data: {chapter: chapter},
             success:function (result) {
                 document.getElementById("original").innerHTML=result.original;
