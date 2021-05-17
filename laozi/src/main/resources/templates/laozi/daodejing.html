@@ -37,6 +37,36 @@
     <h>正文</h>
     <p id="original"></p>
     <h>译文</h>
+    <select name="language" onchange="selectLanguage(this.value)">
+        <option value="translation">Chinese</option>
+        <option value="Bulgarian">Bulgarian</option>
+        <option value="Czech">Czech</option>
+        <option value="Danish">Danish</option>
+        <option value="Dutch">Dutch</option>
+        <option value="English">English</option>
+        <option value="Estonian">Estonian</option>
+        <option value="Finnish">Finnish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Hebrew">Hebrew</option>
+        <option value="Hungarian">Hungarian</option>
+        <option value="Icelandic">Icelandic</option>
+        <option value="Indonesian">Indonesian</option>
+        <option value="Interlingua">Interlingua</option>
+        <option value="Italian">Italian</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Klingon">Klingon</option>
+        <option value="Korean">Korean</option>
+        <option value="Kurdish">Kurdish</option>
+        <option value="Latvian">Latvian</option>
+        <option value="Persian">Persian</option>
+        <option value="Phoenician">Phoenician</option>
+        <option value="Polish">Polish</option>
+        <option value="Romanian">Romanian</option>
+        <option value="Russian">Russian</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Swedish">Swedish</option>
+    </select>
     <p id="translation"></p>
     <h>注释</h>
     <p id="annotation"></p>
@@ -74,6 +104,17 @@
                 console.log(msg)
             }
         });
+    }
+
+    function selectLanguage(language){
+        $.ajax({
+            type: "post",
+            url:"/laozi/selectLanguage",
+            data:{language:language},
+            success:function (result){
+                document.getElementById("translation").innerHTML=result;
+            }
+        })
     }
 
     function  sayHello(chapter){
