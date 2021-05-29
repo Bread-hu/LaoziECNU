@@ -1,13 +1,18 @@
 package com.kg.idiomknowledgegraph.controller;
 
-import com.kg.idiomknowledgegraph.bean.Daodejing;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.kg.idiomknowledgegraph.entity.Daodejing;
 import com.kg.idiomknowledgegraph.service.LaoziService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -35,6 +40,12 @@ public class LaoziController {
     @ResponseBody
     public String selectLanguage(String language) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         return (String) this.daodejing.getClass().getMethod("get"+language,new Class[]{}).invoke(this.daodejing,new Object[]{});
+    }
+
+    @GetMapping("/search")
+    @ResponseBody
+    public List<Map<String,Object>> search(@RequestParam String keywords) throws IOException {
+        return laoziService.searchContentHighlighter(keywords);
     }
 
 }

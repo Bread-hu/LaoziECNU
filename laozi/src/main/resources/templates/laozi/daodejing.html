@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{common::headbar('老子')}">
+<head>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<style th:replace="~{common::background}"></style>
-<div th:insert="~{common::topbar}"></div>
-
 <nav>
     <a href="/index">首页</a>
     <a href="">成语</a>
@@ -33,6 +31,16 @@
         </li>
     </ul>
 </div>
+
+
+
+<div>
+    搜索框：<input type="text" id="search"><br>
+    <button onclick="search()">搜索</button>
+</div>
+
+<div id="switch"></div>
+
 <div class="div-right">
     <h>正文</h>
     <p id="original"></p>
@@ -72,11 +80,14 @@
     <p id="annotation"></p>
 </div>
 
-<div th:insert="~{common::footbar}"></div>
 </body>
 </html>
 
 <script type="text/javascript">
+    var that = this;
+    var searchResult=[];
+    var searchResultLen=0;
+    var switch_number=0;
     var daolist_str = "";
     for (i = 1; i <= 37; i++) {
         daolist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
@@ -117,8 +128,48 @@
         })
     }
 
-    function  sayHello(chapter){
-        document.getElementById("original").innerHTML="hello"+chapter;
-
+    function search(){
+        $.ajax({
+            type:"get",
+            url:"/laozi/search",
+            data:{keywords:document.getElementById("search").value},
+            success:function (result){
+                searchResultLen=result.length;
+                if(searchResultLen>0){
+                    document.getElementById("original").innerHTML=result[switch_number].original;
+                    document.getElementById("translation").innerHTML=result[switch_number].translation;
+                    document.getElementById("annotation").innerHTML=result[switch_number].annotation;
+                    that.searchResult=result;
+                    document.getElementById("switch").innerHTML="<button onclick='previous()'>上一个</button><br/>" +
+                        "<button onclick='next()'>下一个</button><br/>" +
+                        "<button onclick='closeSwitch()'>结束切换</button><br/>"
+                }
+            }
+        })
     }
+
+    function previous(){
+        if(switch_number>0){
+            switch_number-=1;
+            document.getElementById("original").innerHTML=searchResult[switch_number].original;
+            document.getElementById("translation").innerHTML=searchResult[switch_number].translation;
+            document.getElementById("annotation").innerHTML=searchResult[switch_number].annotation;
+        }
+    }
+
+    function next(){
+        if(switch_number<searchResultLen-1){
+            switch_number+=1;
+            document.getElementById("original").innerHTML=searchResult[switch_number].original;
+            document.getElementById("translation").innerHTML=searchResult[switch_number].translation;
+            document.getElementById("annotation").innerHTML=searchResult[switch_number].annotation;
+        }
+    }
+
+    function closeSwitch(){
+        switch_number=0;
+        document.getElementById("switch").innerHTML="";
+    }
+
+
 </script>

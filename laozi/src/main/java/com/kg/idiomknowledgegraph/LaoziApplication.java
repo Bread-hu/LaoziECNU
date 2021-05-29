@@ -10,5 +10,4 @@ public class LaoziApplication {
 
         SpringApplication.run(LaoziApplication.class, args);
     }
-
 }

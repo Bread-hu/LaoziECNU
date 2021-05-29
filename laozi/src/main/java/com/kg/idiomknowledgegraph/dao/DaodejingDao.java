@@ -1,6 +1,6 @@
 package com.kg.idiomknowledgegraph.dao;
 
-import com.kg.idiomknowledgegraph.bean.Daodejing;
+import com.kg.idiomknowledgegraph.entity.Daodejing;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

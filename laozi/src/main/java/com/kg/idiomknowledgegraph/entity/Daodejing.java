@@ -1,4 +1,4 @@
-package com.kg.idiomknowledgegraph.bean;
+package com.kg.idiomknowledgegraph.entity;
 
 import lombok.Data;
 
