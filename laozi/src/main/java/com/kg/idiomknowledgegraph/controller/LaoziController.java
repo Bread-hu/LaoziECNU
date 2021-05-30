@@ -3,6 +3,7 @@ package com.kg.idiomknowledgegraph.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.kg.idiomknowledgegraph.entity.Daodejing;
+import com.kg.idiomknowledgegraph.entity.DaodejingIdiom;
 import com.kg.idiomknowledgegraph.service.LaoziService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,7 @@ public class LaoziController {
     private Daodejing daodejing;
 
     @GetMapping("/daodejing")
-    public String toDaodejing(Model model) {
+    public String toDaodejing() {
         return "laozi/daodejing";
     }
 
@@ -46,6 +47,17 @@ public class LaoziController {
     @ResponseBody
     public List<Map<String,Object>> search(@RequestParam String keywords) throws IOException {
         return laoziService.searchContentHighlighter(keywords);
+    }
+
+    @GetMapping("/daodejingIdiom")
+    public String toDaodejingIdiom(){
+        return "laozi/daodejingIdiom";
+    }
+
+    @GetMapping("/selectIdiom")
+    @ResponseBody
+    public DaodejingIdiom getIdiomById(int id){
+        return laoziService.getIdiom(id);
     }
 
 }

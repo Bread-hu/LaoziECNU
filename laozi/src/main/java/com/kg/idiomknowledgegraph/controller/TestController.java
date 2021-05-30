@@ -2,6 +2,7 @@ package com.kg.idiomknowledgegraph.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.kg.idiomknowledgegraph.entity.Daodejing;
+import com.kg.idiomknowledgegraph.entity.DaodejingIdiom;
 import com.kg.idiomknowledgegraph.service.LaoziService;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -14,9 +15,6 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.text.Text;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.index.query.MatchAllQueryBuilder;
-import org.elasticsearch.index.query.MultiMatchQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
@@ -43,11 +41,22 @@ public class TestController {
     LaoziService laoziService;
 
     @Test
-    public void insertAll() throws IOException {
+    public void insertAllPara() throws IOException {
         BulkRequest bulkRequest=new BulkRequest();
         for(int i=1;i<=81;i++){
             Daodejing daodejing=laoziService.getDaodejing(i);
             bulkRequest.add(new IndexRequest("daodejing").id(Integer.toString(i)).source(JSON.toJSONString(daodejing), XContentType.JSON));
+        }
+        BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
+        System.out.println(!bulkResponse.hasFailures());
+    }
+
+    @Test
+    public void insertAllIdiom() throws IOException {
+        BulkRequest bulkRequest=new BulkRequest();
+        for(int i=0;i<=51;i++){
+            DaodejingIdiom daodejingIdiom=laoziService.getIdiom(i);
+            bulkRequest.add(new IndexRequest("daodejing_idiom").id(Integer.toString(i)).source(JSON.toJSONString(daodejingIdiom), XContentType.JSON));
         }
         BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
         System.out.println(!bulkResponse.hasFailures());

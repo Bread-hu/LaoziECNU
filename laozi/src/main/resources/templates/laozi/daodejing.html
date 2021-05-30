@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <title>daodejing</title>
     <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -15,9 +17,7 @@
 </nav>
 <nav>
     <a href="/laozi/daodejing">道德经</a>
-    <a href="translation">译本</a>
-    <a href="idiom">成语</a>
-    <a href="statistics">统计</a>
+    <a href="/laozi/daodejingIdiom">成语</a>
 </nav>
 <div class="div-left">
     <ul>
@@ -41,7 +41,7 @@
 
 <div id="switch"></div>
 
-<div class="div-right">
+<div>
     <h>正文</h>
     <p id="original"></p>
     <h>译文</h>
@@ -89,6 +89,9 @@
     var searchResultLen=0;
     var switch_number=0;
     var daolist_str = "";
+    var para=getQueryVariable("para");
+    var from=getQueryVariable("from");
+
     for (i = 1; i <= 37; i++) {
         daolist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
         // daolist_str += "<li><button onclick=\"sayHello(" + i + ")\">第" + i + "章</button></li>";
@@ -100,6 +103,31 @@
         delist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
     }
     document.getElementById("de_list").innerHTML = delist_str;
+
+    if(para!=null){
+        selectChapter(para);
+        $.ajax({
+            type:"get",
+            url:"/laozi/search",
+            data:{keywords:from},
+            success:function (result){
+                    document.getElementById("original").innerHTML=result[0].original;
+                    document.getElementById("translation").innerHTML=result[0].translation;
+                    document.getElementById("annotation").innerHTML=result[0].annotation;
+            }
+        })
+    }
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return decodeURI(pair[1]);}
+        }
+        return null;
+    }
 
     function selectChapter(chapter) {
         $.ajax({
@@ -170,6 +198,4 @@
         switch_number=0;
         document.getElementById("switch").innerHTML="";
     }
-
-
 </script>

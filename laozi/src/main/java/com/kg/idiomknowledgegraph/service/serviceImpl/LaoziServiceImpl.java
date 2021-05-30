@@ -1,5 +1,6 @@
 package com.kg.idiomknowledgegraph.service.serviceImpl;
 
+import com.kg.idiomknowledgegraph.entity.DaodejingIdiom;
 import com.kg.idiomknowledgegraph.service.LaoziService;
 import com.kg.idiomknowledgegraph.entity.Daodejing;
 import com.kg.idiomknowledgegraph.dao.DaodejingDao;
@@ -34,8 +35,13 @@ public class LaoziServiceImpl implements LaoziService {
     private DaodejingDao daodejingDao;
 
     @Override
+    public DaodejingIdiom getIdiom(int id) {
+        return daodejingDao.getIdiomById(id);
+    }
+
+    @Override
     public Daodejing getDaodejing(int chapter) {
-        return daodejingDao.getByChapter(chapter);
+        return daodejingDao.getDaodejingByChapter(chapter);
     }
 
     @Override
