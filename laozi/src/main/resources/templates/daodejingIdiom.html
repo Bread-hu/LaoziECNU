@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>daodejingIdiom</title>
+  <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<nav>
+  <a href="/index">首页</a>
+  <a href="">成语</a>
+  <a href="">作者</a>
+  <a href="">文献</a>
+  <a href="">时空间GIS</a>
+  <a href="">知识图谱</a>
+  <a href="/daodejing/daodejing">老子</a>
+</nav>
+<nav>
+  <a href="/daodejing/daodejing">道德经</a>
+  <a href="/daodejing/daodejingIdiom">成语</a>
+</nav>
+
+
+<div>
+  <h>成语名字</h>
+  <p id="idiom_name"></p>
+  <h>出自第几章</h>
+  <p id="para"></p>
+  <h>出自原文片段</h>
+  <p id="from"></p>
+  <button onclick="toOriginal()">点击查看原文</button>
+  <h>成语解释</h>
+  <p id="explanation"></p>
+  <h>统计分析</h>
+  <p>一些图表</p>
+</div>
+
+<div>
+  <ul>
+    <li><button onclick="selectIdiom(0)">玄之又玄</button></li>
+    <li><button onclick="selectIdiom(1)">有无相生</button></li>
+    <li><button onclick="selectIdiom(2)">功成不居</button></li>
+    <li><button onclick="selectIdiom(3)">和光同尘</button></li>
+    <li><button onclick="selectIdiom(4)">天地不仁</button></li>
+    <li><button onclick="selectIdiom(5)">天长地久</button></li>
+    <li><button onclick="selectIdiom(6)">上善若水</button></li>
+    <li><button onclick="selectIdiom(7)">金玉满堂</button></li>
+    <li><button onclick="selectIdiom(8)">功成身退</button></li>
+    <li><button onclick="selectIdiom(9)">目迷五色</button></li>
+    <li><button onclick="selectIdiom(10)">宠辱若惊</button></li>
+    <li><button onclick="selectIdiom(11)">视而不见</button></li>
+    <li><button onclick="selectIdiom(12)">听而不闻</button></li>
+    <li><button onclick="selectIdiom(13)">涣然冰释</button></li>
+    <li><button onclick="selectIdiom(14)">虚怀若谷</button></li>
+    <li><button onclick="selectIdiom(15)">绝圣弃智</button></li>
+    <li><button onclick="selectIdiom(16)">少私寡欲</button></li>
+    <li><button onclick="selectIdiom(17)">相差无几</button></li>
+    <li><button onclick="selectIdiom(18)">如登春台</button></li>
+    <li><button onclick="selectIdiom(19)">飘风骤雨</button></li>
+    <li><button onclick="selectIdiom(20)">余食赘行</button></li>
+    <li><button onclick="selectIdiom(21)">天大地大</button></li>
+    <li><button onclick="selectIdiom(22)">道法自然</button></li>
+    <li><button onclick="selectIdiom(23)">知白守黑</button></li>
+    <li><button onclick="selectIdiom(24)">去甚去泰</button></li>
+    <li><button onclick="selectIdiom(25)">天道好还</button></li>
+    <li><button onclick="selectIdiom(26)">佳兵不祥</button></li>
+    <li><button onclick="selectIdiom(27)">知止不殆</button></li>
+    <li><button onclick="selectIdiom(28)">自知之明</button></li>
+    <li><button onclick="selectIdiom(29)">淡而无味</button></li>
+    <li><button onclick="selectIdiom(30)">将夺固与</button></li>
+    <li><button onclick="selectIdiom(31)">无中生有</button></li>
+    <li><button onclick="selectIdiom(32)">若存若亡</button></li>
+    <li><button onclick="selectIdiom(33)">大器晚成</button></li>
+    <li><button onclick="selectIdiom(34)">大音希声</button></li>
+    <li><button onclick="selectIdiom(35)">知足不辱</button></li>
+    <li><button onclick="selectIdiom(36)">大巧若拙</button></li>
+    <li><button onclick="selectIdiom(37)">知足常乐</button></li>
+    <li><button onclick="selectIdiom(38)">出生入死</button></li>
+    <li><button onclick="selectIdiom(39)">祸福相依</button></li>
+    <li><button onclick="selectIdiom(40)">根深蒂固</button></li>
+    <li><button onclick="selectIdiom(41)">以德报怨</button></li>
+    <li><button onclick="selectIdiom(42)">轻诺寡信</button></li>
+    <li><button onclick="selectIdiom(43)">千里之行，始于足下</button></li>
+    <li><button onclick="selectIdiom(44)">慎终如始</button></li>
+    <li><button onclick="selectIdiom(45)">俭故能广</button></li>
+    <li><button onclick="selectIdiom(46)">寸进尺退</button></li>
+    <li><button onclick="selectIdiom(47)">被褐怀玉</button></li>
+    <li><button onclick="selectIdiom(48)">天网恢恢，疏而不漏</button></li>
+    <li><button onclick="selectIdiom(49)">小国寡民</button></li>
+    <li><button onclick="selectIdiom(50)">鸡犬相闻</button></li>
+    <li><button onclick="selectIdiom(51)">老死不相往来</button></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  that=this;
+  var para=0;
+  var from="";
+  selectIdiom(0)
+
+  function selectIdiom(id){
+    $.ajax({
+      type:"get",
+      url:"/daodejing/selectIdiom",
+      data:{id:id},
+      success:function (result){
+        document.getElementById("idiom_name").innerHTML=result.name;
+        document.getElementById("para").innerHTML=result.para;
+        document.getElementById("from").innerHTML=result.from;
+        document.getElementById("explanation").innerHTML=result.explanation;
+        that.para=result.para;
+        that.from=result.from;
+      }
+    })
+  }
+
+  function toOriginal(){
+    window.location.href="/daodejing/daodejing?para="+para+"&from="+from;
+  }
+
+</script>

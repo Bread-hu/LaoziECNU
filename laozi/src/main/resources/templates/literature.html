@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('文献索引')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<input type="hidden" id="book_type" name="type" value="经部">
+
+<div class="index-container" style="background-color: #d5e8d1;">
+		<div class="info_tree" >
+			<a href="./index">首页</a>
+			<h1 >></h1>
+			<h1 >文献</h1>
+		</div>
+		<div class="swiper-slide swiper-slide-active" style="background-repeat: no-repeat;
+			                      min-height: 836px;height: auto;  background-size: cover; width: 100%"  >
+			<div class="banner2" style="top: 20px;overflow: hidden;">
+				<p style="padding-left: 38%">古籍搜索</p>
+				<div class="search">
+					<div class="search-box">
+						<input  type="text" class="search_input" autocomplete="off" placeholder="请输入检索词" id="keyword" name="keyword">
+						<a id="btnSearch" class="search_btn" onclick="fun()"></a>
+					</div>
+					<a class="advanced_search_btn" style="height: 50px;"  onclick="fun()">搜索</a>
+				</div>
+			</div>
+			<div class="context_box1">
+				<a id="jing_index" style="padding-left: 15%" selected onclick="getLiteraturesByType({category:'经部',page:0})">经部</a>
+				<a id="shi_index" style="padding-left: 15%" onclick="getLiteraturesByType({category:'史部',page:0})">史部</a>
+				<a id="zi_index" style="padding-left: 15%" onclick="getLiteraturesByType({category:'子部',page:0})">子部</a>
+				<a id="ji_index" style="padding-left: 15%" onclick="getLiteraturesByType({category:'集部',page:0})">集部</a>
+			</div>
+			<div id="book_list" class="content_box2" >
+			</div>
+		</div>
+
+</div>
+
+<div th:insert="~{common::footbar}"></div>
+</body>
+</html>
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    function getLiteraturesByType(dataIn) {
+        $.ajax({
+            type: "post",
+            url: "/literaturesByType",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(dataIn),
+            success: function (result) {
+                var str=""
+                for (i in result){
+                    var url_a="<a target=\"_blank\" href=\"./book?book_name="+result[i].book_name+"\"/>"+result[i].book_name+"</a>"
+                    str+=url_a
+                }
+                document.getElementById("book_list").innerHTML = str;
+            },
+            error: function (msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    var sp = "";
+    function fun() {
+        sp = $("#select_1").val();
+        keyword = $("#keyword").val();
+        if (keyword == "") {
+            alert("检索词不能为空！");
+        } else {
+            var form1 = document.createElement("form");
+            document.body.appendChild(form1);
+            // 创建一个输入
+            var input = document.createElement("input");
+            var inputs = document.createElement("input");
+            // 设置相应参数
+            input.type = "hidden";
+            input.name = "sp";
+            input.value = sp;
+            form1.appendChild(input);
+            inputs.type = "hidden";
+            inputs.name = "keyword";
+            inputs.value = keyword;
+            form1.appendChild(input);
+            form1.appendChild(inputs);
+            form1.method = "POST";
+            form1.action = "book_search";
+            form1.submit();
+        }
+    }
+
+    window.onload = function () {
+        getLiteraturesByType({category:'经部',page:0})
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('成语图谱')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<!-- 为ECharts准备一个具备大小的Dom -->
+<div class = "col-md-12">
+  <div class="panel panel-default ">
+    <header class="panel-heading">
+      关系图 :
+    </header>
+    <div class = "panel-body ">
+      <div id="graph" style="width: 100%;height:600px;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div th:insert="~{common::footbar}"></div>
+
+</body>
+</html>

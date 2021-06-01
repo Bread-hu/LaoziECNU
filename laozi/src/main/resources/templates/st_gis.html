@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('时空间GIS')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+<div class="index-container" style="background-color: #d5e8d1;">
+  <div class="info_tree" >
+    <a href="./index">首页</a>
+    >
+    <a href="">统计分析</a>
+    ><h1 id="word_show"></h1>
+
+  </div>
+  <div class="swiper-container swiper-container-banner">
+    <div class="info_tree">
+        <p class="static_title">gis图</p><br>
+        <img src="../images/kk.jpg" width="100%">
+    </div>
+  </div>
+</div>
+
+<div th:insert="~{common::footbar}"></div>
+
+</body>
+</html>

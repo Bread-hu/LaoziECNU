@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>daodejing</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<nav>
+    <a href="/index">首页</a>
+    <a href="">成语</a>
+    <a href="">作者</a>
+    <a href="">文献</a>
+    <a href="">时空间GIS</a>
+    <a href="">知识图谱</a>
+    <a href="/daodejing/daodejing">老子</a>
+</nav>
+<nav>
+    <a href="/daodejing/daodejing">道德经</a>
+    <a href="/daodejing/daodejingIdiom">成语</a>
+</nav>
+<div class="div-left">
+    <ul>
+        <li>道经
+            <ul id="dao_list">
+            </ul>
+        </li>
+        <li>德经
+            <ul id="de_list">
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+<div>
+    搜索框：<input type="text" id="search"><br>
+    <button onclick="search()">搜索</button>
+</div>
+
+<div id="switch"></div>
+
+<div>
+    <h>正文</h>
+    <p id="original"></p>
+    <h>译文</h>
+    <select name="language" onchange="selectLanguage(this.value)">
+        <option value="Translation">Chinese</option>
+        <option value="Bulgarian">Bulgarian</option>
+        <option value="Czech">Czech</option>
+        <option value="Danish">Danish</option>
+        <option value="Dutch">Dutch</option>
+        <option value="English">English</option>
+        <option value="Estonian">Estonian</option>
+        <option value="Finnish">Finnish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Hebrew">Hebrew</option>
+        <option value="Hungarian">Hungarian</option>
+        <option value="Icelandic">Icelandic</option>
+        <option value="Indonesian">Indonesian</option>
+        <option value="Interlingua">Interlingua</option>
+        <option value="Italian">Italian</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Klingon">Klingon</option>
+        <option value="Korean">Korean</option>
+        <option value="Kurdish">Kurdish</option>
+        <option value="Latvian">Latvian</option>
+        <option value="Persian">Persian</option>
+        <option value="Phoenician">Phoenician</option>
+        <option value="Polish">Polish</option>
+        <option value="Romanian">Romanian</option>
+        <option value="Russian">Russian</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Swedish">Swedish</option>
+    </select>
+    <p id="translation"></p>
+    <h>注释</h>
+    <p id="annotation"></p>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    var that = this;
+    var searchResult=[];
+    var searchResultLen=0;
+    var switch_number=0;
+    var daolist_str = "";
+    var para=getQueryVariable("para");
+    var from=getQueryVariable("from");
+
+    for (i = 1; i <= 37; i++) {
+        daolist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
+        // daolist_str += "<li><button onclick=\"sayHello(" + i + ")\">第" + i + "章</button></li>";
+    }
+    document.getElementById("dao_list").innerHTML = daolist_str;
+
+    var delist_str = ""
+    for (i = 38; i <= 81; i++) {
+        delist_str += "<li><button onclick=\"selectChapter(" + i + ")\">第" + i + "章</button></li>";
+    }
+    document.getElementById("de_list").innerHTML = delist_str;
+
+    if(para!=null){
+        selectChapter(para);
+        $.ajax({
+            type:"get",
+            url:"/daodejing/search",
+            data:{keywords:from},
+            success:function (result){
+                    document.getElementById("original").innerHTML=result[0].original;
+                    document.getElementById("translation").innerHTML=result[0].translation;
+                    document.getElementById("annotation").innerHTML=result[0].annotation;
+            }
+        })
+    }
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return decodeURI(pair[1]);}
+        }
+        return null;
+    }
+
+    function selectChapter(chapter) {
+        $.ajax({
+            type: "post",
+            url: "/daodejing/daodejing",
+            data: {chapter: chapter},
+            success:function (result) {
+                document.getElementById("original").innerHTML=result.original;
+                document.getElementById("translation").innerHTML=result.translation;
+                document.getElementById("annotation").innerHTML=result.annotation;
+            },
+            error:function(msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    function selectLanguage(language){
+        $.ajax({
+            type: "post",
+            url:"/daodejing/selectLanguage",
+            data:{language:language},
+            success:function (result){
+                document.getElementById("translation").innerHTML=result;
+            }
+        })
+    }
+
+    function search(){
+        $.ajax({
+            type:"get",
+            url:"/daodejing/search",
+            data:{keywords:document.getElementById("search").value},
+            success:function (result){
+                searchResultLen=result.length;
+                if(searchResultLen>0){
+                    document.getElementById("original").innerHTML=result[switch_number].original;
+                    document.getElementById("translation").innerHTML=result[switch_number].translation;
+                    document.getElementById("annotation").innerHTML=result[switch_number].annotation;
+                    that.searchResult=result;
+                    document.getElementById("switch").innerHTML="<button onclick='previous()'>上一个</button><br/>" +
+                        "<button onclick='next()'>下一个</button><br/>" +
+                        "<button onclick='closeSwitch()'>结束切换</button><br/>"
+                }
+            }
+        })
+    }
+
+    function previous(){
+        if(switch_number>0){
+            switch_number-=1;
+            document.getElementById("original").innerHTML=searchResult[switch_number].original;
+            document.getElementById("translation").innerHTML=searchResult[switch_number].translation;
+            document.getElementById("annotation").innerHTML=searchResult[switch_number].annotation;
+        }
+    }
+
+    function next(){
+        if(switch_number<searchResultLen-1){
+            switch_number+=1;
+            document.getElementById("original").innerHTML=searchResult[switch_number].original;
+            document.getElementById("translation").innerHTML=searchResult[switch_number].translation;
+            document.getElementById("annotation").innerHTML=searchResult[switch_number].annotation;
+        }
+    }
+
+    function closeSwitch(){
+        switch_number=0;
+        document.getElementById("switch").innerHTML="";
+    }
+</script>

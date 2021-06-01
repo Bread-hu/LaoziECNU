@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('古籍内容')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<div style="background-color: #d5e8d1">
+	<div class="info_tree" >
+		<a href="./index" >首页</a>
+		>
+		<a href="./literature">古籍</a>
+		>
+		<a  href="./literature"></a>
+
+		<input type="hidden" id="subook_id">
+		<input type="hidden" id="subook_name">
+		<input type="hidden" id="subsubook_name">
+
+	</div>
+	<div class="index-container">
+		<div class="swiper-slide swiper-slide-active" style="background-repeat: no-repeat;
+			                      min-height: 836px;height: auto;  background-size: cover; width:100%;overflow:scroll;">
+			<style>
+                .book_box {
+                    height: auto;
+                    width: 40%;
+                    font-family: Arial, Helvetica, sans-serif;
+                    clear: both;
+                    margin: 20px 20px 20px 20%;
+                    background-color: #fcfbf3;
+                    overflow: hidden;
+                    border: 1px solid #d7d5bc;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 5px;
+                    padding: 0px;
+                    color: #0F0F0F;
+                    font-size: 20px;
+                    line-height: 200%;
+                    background-attachment: fixed;
+                }
+                .tool {
+                    height: 32px;
+                    clear: both;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 3px;
+                }
+			</style>
+			<div class="book_box">
+				<p id="book_show" style="margin-left: 20px"></p><br>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+<div th:insert="~{common::footbar}"></div>
+</body>
+</html>
+
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    function getBookContent(dataIn) {
+        $.ajax({
+            type: "post",
+            url: "/getBookContent",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(dataIn),
+            success: function (result) {
+                document.getElementById("book_show").innerHTML=result.content
+            },
+            error: function (msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    window.onload = function () {
+        var subook_id=GetQueryString('subook_id')
+        document.getElementById("subook_id").innerHTML=subook_id
+        var subook_name=GetQueryString('subook_name')
+        document.getElementById("subook_name").innerHTML=subook_name
+        var subsubook_name=GetQueryString('subsubook_name')
+        document.getElementById("subsubook_name").innerHTML=subsubook_name
+        getBookContent({subook_id:subook_id,subook_name:subook_name,subsubook_name:subsubook_name})
+    }
+
+</script>

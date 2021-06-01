@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('成语详解')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<div class="index-container" style="background-color: #d5e8d1;">
+	<div class="info_tree">
+		<a href="./index">首页</a>
+		>
+		<a href="./chengyu">成语词典</a>
+		>
+		<h1 id="word"></h1>
+	</div>
+	<div class="swiper-slide swiper-slide-active" style="background-repeat: no-repeat; background-size: cover;min-height: 836px;height: auto; width: 100%;">
+		<div class="info_content zj clearfix"  style="padding-left:10%;width: 80%;">
+			<style>
+				.title_this{
+					background-color:#ddebff;
+					border-bottom:1px solid #b2c9eb;
+					font-size:20px;
+					padding-left:12px;
+					height:40px;
+					padding-top:4px;
+					padding-bottom:4px;
+					font-weight: bold;
+				}
+				.info_txt2 p1 {
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+			</style>
+			<h1 id="chengyu_context" class="title_this"></h1>
+			<div id="show_detail_box" class="info_txt2 clearfix" style="font-size: 16px;"></div>
+			<h1 id="chengyu_allusion" class="title_this"></h1>
+			<div id="chengyu_allusion_box" class="info_txt2 clearfix" style="font-size: 16px;"></div>
+			<h1 id="chengyu_realtion" class="title_this"></h1>
+			<div id="chengyu_realtion_box" class="info_txt2 clearfix" style="font-size: 16px;"></div>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div th:insert="~{common::footbar}"></div>
+</body>
+</html>
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    window.onload = function () {
+        getIdiomById({id:GetQueryString('wordId')})
+
+    }
+    function getIdiomById(dataIn) {
+        $.ajax({
+            type: "post",
+            url: "/getIdiomById",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(dataIn),
+            success: function (result) {
+                document.getElementById("word").innerHTML = result.idiom
+                document.getElementById("chengyu_context").innerHTML = "成语："+result.idiom
+                document.getElementById("chengyu_allusion").innerHTML = result.idiom+" 典故和出处"
+                document.getElementById("chengyu_realtion").innerHTML = result.idiom+" 与作者、古籍相关的联系"
+
+
+                var str = "<p1>【拼音"+"】：</p1>"+result.idiomPhonetic +"<br>"
+	               str += "<p1>【简拼"+"】：</p1>"+result.simplePhonetic +"<br>"
+	               str += "<p1>【解释"+"】：</p1>"+result.explanation +"<br>"
+	               str += "<p1>【示例"+"】：</p1>"+result.example +"<br>"
+	               str += "<p1>【近义词"+"】：</p1>"+result.similar +"<br>"
+	               str += "<p1>【语法"+"】：</p1>"+result.grammar +"<br>"
+	               str += "<p1>【英文"+"】：</p1>"+result.translation +"<br>"
+
+                document.getElementById("show_detail_box").innerHTML = str;
+                document.getElementById("chengyu_allusion_box").innerHTML = result.allusion;
+                getRelation({name:result.idiom})
+
+            },
+            error: function (msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    function getRelation(dataIn) {
+        $.ajax({
+            type: "post",
+            url: "/getRelation",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(dataIn),
+            success: function (result) {
+                var str = "<p1>【出自古籍"+"】：</p1>"+result.book +"<br>"
+                str += "<p1>【作者"+"】：</p1>"+result.author +"<br>"
+                document.getElementById("chengyu_realtion_box").innerHTML = str;
+            },
+            error: function (msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+</script>

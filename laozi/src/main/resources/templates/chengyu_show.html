@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common::headbar('成语展示')}">
+</head>
+<body>
+<style th:replace="~{common::background}"></style>
+<div th:insert="~{common::topbar}"></div>
+
+<div class="index-container" style="background-color: #d5e8d1;">
+	<div class="info_tree" >
+		<a href="./index">首页</a>
+		 >
+		<a href="./chengyu">成语词典</a>
+		 >
+		<h1 id="alpha"></h1>
+
+	</div>
+	<div class="index-container">
+				<div style="background-repeat: no-repeat; background-size: cover;min-height: 836px;height: auto; width: 100%;overflow: scroll">
+					<div class="info_content zj clearfix" style="padding-left:10%;width: 60%;">
+						<style>
+							.info_txt2 a{ display:inline-block;
+						            width:125px;height:30px; overflow:hidden;
+									font-size:20px;
+									line-height:30px;
+									white-space:nowrap;
+							}
+						</style>
+						<div id="showIdioms" class="info_txt2 clearfix" >
+					    </div>
+					</div>
+				</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div th:insert="~{common::footbar}"></div>
+</body>
+</html>
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return decodeURI(r[2]);
+        return null;
+    }
+
+    function getIdioms(dataIn) {
+        $.ajax({
+            type: "post",
+            url: "/getIdioms",
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(dataIn),
+            success: function (result) {
+                var str=""
+                for (i in result){
+                    var url_a="<a target=\"_blank\" href=\"./chengyu_show_detail?wordId="+result[i].id+"\"/>"+result[i].idiom+"</a>"
+                    str+=url_a
+                }
+                document.getElementById("showIdioms").innerHTML = str;
+            },
+            error: function (msg) {
+                console.log(msg)
+            }
+        });
+    }
+
+    window.onload = function () {
+        var tt = document.getElementById('alpha')
+	    var alphabet=GetQueryString('alphabet')
+        tt.innerHTML = "拼音："+alphabet+"的所有成语"
+        getIdioms({firstPhonetic:alphabet})
+    }
+</script>
