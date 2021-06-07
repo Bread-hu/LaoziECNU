@@ -38,29 +38,4 @@ public class PathController {
 	}
 	//------------------------------------------------------时空gis
 
-	@RequestMapping(value = "/st_gis")
-	public String st_gis() {
-		return "st_gis";
-	}
-	//------------------------------------------------------知识图谱
-	@RequestMapping(value = "/knowledge_graph")
-	public String knowledge_graph() {
-		return "knowledge_graph";
-	}
-	//------------------------------------------------------老子
-	@RequestMapping(value = "/laozi")
-	public String laozi() {
-		return "chengyu";
-	}
-
-
-
-
-
-	@RequestMapping(value = "/test")
-	public String test() {
-		return "test";
-	}
-
-
 }

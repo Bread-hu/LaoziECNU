@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link th:href="@{/css/author.css}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">语文项目</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index">首页 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chengyu">成语</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/page?dynasty=不限&pageNumber=0">作者</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/gbooks">非核心文献</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">知识图谱</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/daodejing/daodejing">老子</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container-fluid pageBox">
+
+  <div class="row">
+    <div class="col-2 m-auto" style="height: 3000px; border: 1px solid #696">
+      <div class="row">
+
+        <div class="col-12" style="padding: 0;">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item" th:each="book: ${curPath}">
+                <a th:href="@{'gbooks?book='+${book}}" th:text="${book}"></a>
+              </li>
+<!--              <li class="breadcrumb-item"><a href="#">易藏</a></li>-->
+            </ol>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="row booksList">
+        <ul>
+          <li th:each="book: ${books}">
+            <a class="page-link" th:href="@{'gbooks?book='+${book.getBook_name()}}" th:text="${book.getBook_name()}"></a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="col-10" style="height: 3000px;">
+
+      <div class="row">
+        <h2 th:if="${#lists.isEmpty(books)}" th:text="${curName}"></h2>
+        <p th:if="${#lists.isEmpty(books)}" th:text="${content}"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="test"></div>
+  <button id="btn">点击</button>
+
+</div>
+</body>
+</html>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+  //获取basePath，测试的话就能用就完了
+  // $(document).ready(function(){
+  //     alert('弹出对话框.');
+  // });
+  $("#btn").on("click", function(){
+    $.ajax({
+      url: "/test",
+      type: "post",
+      success: function(data){
+        $("#test").html(data);
+      }
+    })
+  });
+</script>

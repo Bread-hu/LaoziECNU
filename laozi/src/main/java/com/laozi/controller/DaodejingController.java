@@ -24,7 +24,7 @@ public class DaodejingController {
 
     @GetMapping("/daodejing")
     public String toDaodejing() {
-        return "/daodejing";
+        return "daodejing";
     }
 
     @PostMapping("/daodejing")
@@ -48,7 +48,7 @@ public class DaodejingController {
 
     @GetMapping("/daodejingIdiom")
     public String toDaodejingIdiom(){
-        return "/daodejingIdiom";
+        return "daodejingIdiom";
     }
 
     @GetMapping("/selectIdiom")

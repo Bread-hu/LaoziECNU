@@ -3,6 +3,8 @@ package com.laozi.controller;
 import com.alibaba.fastjson.JSON;
 import com.laozi.entity.daodejing.Daodejing;
 import com.laozi.entity.daodejing.DaodejingIdiom;
+import com.laozi.service.BookService;
+import com.laozi.service.ChengYuService;
 import com.laozi.service.DaodejingService;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -36,21 +38,41 @@ public class TestController {
     @Autowired
     @Qualifier("restHighLevelClient")
     private RestHighLevelClient client;
-
     @Autowired
     DaodejingService daodejingService;
+    @Autowired
+    ChengYuService chengYuService;
+    @Autowired
+    BookService bookService;
 
+    //把成语和它url放es中
     @Test
-    public void insertAllPara() throws IOException {
+    public void insertAllIdioms() throws IOException {
         BulkRequest bulkRequest=new BulkRequest();
         for(int i=1;i<=81;i++){
             Daodejing daodejing= daodejingService.getDaodejing(i);
+
             bulkRequest.add(new IndexRequest("daodejing").id(Integer.toString(i)).source(JSON.toJSONString(daodejing), XContentType.JSON));
         }
         BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
         System.out.println(!bulkResponse.hasFailures());
     }
 
+
+    // 把mysql的道德经插入到es中
+    @Test
+    public void insertAllPara() throws IOException {
+        BulkRequest bulkRequest=new BulkRequest();
+        for(int i=1;i<=81;i++){
+            Daodejing daodejing= daodejingService.getDaodejing(i);
+
+            bulkRequest.add(new IndexRequest("daodejing").id(Integer.toString(i)).source(JSON.toJSONString(daodejing), XContentType.JSON));
+        }
+        BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
+        System.out.println(!bulkResponse.hasFailures());
+    }
+
+    // 把mysql的道德经成语插入到es中
     @Test
     public void insertAllIdiom() throws IOException {
         BulkRequest bulkRequest=new BulkRequest();
