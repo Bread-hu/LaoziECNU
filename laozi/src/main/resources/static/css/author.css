@@ -1,0 +1,49 @@
+.authorBox {
+    height: 250px;
+    clear: both;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.authorBox .cont {
+    height: 250px;
+    clear: both;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.authorBox .cont .divImg {
+    float: left;
+    width: 105px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.authorBox .cont p {
+    font_size: 14px;
+    margin-bottom: 10px;
+    line-height: 200%;
+}
+
+.pageBox {
+    background-color: #E1E0C7;
+}
+
+.dynBox {
+    height: 120px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+.dynDisp {
+    margin: 20px;
+}
+
+.dynspan {
+    margin-left: 15px;
+}

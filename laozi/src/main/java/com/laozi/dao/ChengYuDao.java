@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ChengYuDao {
@@ -20,6 +21,7 @@ public interface ChengYuDao {
     @Select("SELECT * FROM idiom_relation WHERE `idiom` = #{idiom} limit 1")
     public ChengYuRelation getRelation(String idiom);
 
+    public List<Map<String,String>> getAllIDandNames();
 
 //    @Select("SELECT `content` FROM daodejing WHERE `jingbu` = #{jingbu} AND `category` = \"译文\" ORDER BY `chapter`")
 //    public List<String> getTranslations(String jingbu);
