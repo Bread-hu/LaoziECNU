@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/index">首页 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home/index">首页 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/chengyu">成语</a>
+                    <a class="nav-link" href="/idiom">成语</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/page?dynasty=不限&pageNumber=0">作者</a>
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">知识图谱</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/daodejing/daodejing">老子</a>
+                    <a class="nav-link" href="#">老子</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -79,7 +79,7 @@
                                 <div class="divImg">
                                     <img th:src="${author.getAuthor_pic()}" width="105" height="150" alt="pic load failed"/>
                                 </div>
-                                <p th:text="${author.getAuthor_name()}"></p>
+                                <a th:text="${author.getAuthor_name()}" th:href="@{'/authorDetail?name='+${author.getAuthor_name()}}"></a>
                                 <p th:text="${author.getAuthor_intro()}"></p>
                             </div>
                         </div>

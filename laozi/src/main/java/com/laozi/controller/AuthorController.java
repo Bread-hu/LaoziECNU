@@ -1,8 +1,9 @@
 package com.laozi.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.laozi.entity.book.DynastyCount;
 import com.laozi.entity.author.Author;
-import com.laozi.entity.author.DynastyCount;
+import com.laozi.entity.author.AuthorData;
 import com.laozi.service.AuthorService;
 import com.laozi.util.JsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +60,6 @@ public class AuthorController {
         else{
             System.out.printf("curr dynasty: %s %n", curr_dynasty);
             count = authorService.getAuthorSumByDynasty(curr_dynasty);
-            System.out.println("count: " + Integer.toString(count));
         }
 
         if(count > 0){
@@ -84,16 +84,13 @@ public class AuthorController {
         map.put("pageNo", tmpPageNo);
         map.put("pageSize", pageSize);
 
-        System.out.println("222222222222123123123");
+
         List<Author> authorListSlice;
         if(curr_dynasty.equals("不限"))
             authorListSlice = authorService.getAuthorSlice(map);
         else{
-            System.out.println("123123123");
             map.put("dynasty", curr_dynasty);
-            System.out.println("asdakjsdfasf");
             authorListSlice = authorService.getAuthorSliceWithDynasty(map);
-            System.out.println("size:"+Integer.toString(authorListSlice.size()));
         }
 
         // compute the nav range
@@ -120,6 +117,11 @@ public class AuthorController {
         model.addAttribute("curr_dynasty", curr_dynasty);
 
         return "author";
+    }
+
+    @GetMapping("/authorDetail")
+    public String authorDetail(String name){
+        return "authorDetail";
     }
 
     @PostMapping("/page")
@@ -218,6 +220,21 @@ public class AuthorController {
         return res;
     }
 
+    @PostMapping("/authorDetail")
+    @ResponseBody
+    public JSONObject AuthorDetail(String author_name){
+        System.out.println("author_name: "+ author_name);
+        List<AuthorData> authorDataList = authorService.getAuthorDetailData(author_name);
+        HashMap<String, String> h = new HashMap<String, String>();
+        for(AuthorData data: authorDataList){
+            h.put(data.getTitle(), data.getContent());
+        }
+        JSONObject res = new JSONObject();
+        res.put("data", h);
+        res.put("name", author_name);
+        return res;
+    }
+
     @GetMapping("/pp")
     public String authorPage(String pageNumber,  Model model){
         String dynasty = "";
@@ -305,4 +322,22 @@ public class AuthorController {
         jr.setData(b);
         return jr;
     }
+
+    @PostMapping("/test")
+    @ResponseBody
+    public JSONObject gettest(@RequestParam Map<String,Object> Pmap){
+        String page = (String)Pmap.get("pageNum");
+        String dynasty = (String)Pmap.get("dynasty");
+        System.out.println(page);
+        System.out.println(dynasty);
+        List<DynastyCount> b = authorService.getDynastyCount();
+        for(DynastyCount a : b) {
+            System.out.println(a.getDynasty());
+            System.out.println(a.getCount());
+        }
+        JSONObject j = new JSONObject();
+        j.put("res", b);
+        return j;
+    }
+
 }

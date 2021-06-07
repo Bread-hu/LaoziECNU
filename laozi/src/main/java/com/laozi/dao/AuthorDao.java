@@ -1,7 +1,8 @@
 package com.laozi.dao;
 
 import com.laozi.entity.author.Author;
-import com.laozi.entity.author.DynastyCount;
+import com.laozi.entity.author.AuthorData;
+import com.laozi.entity.book.DynastyCount;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -31,5 +32,8 @@ public interface AuthorDao {
 
     @Select("select author_dynasty, count(*) as author_count from author group by author_dynasty")
     public List<DynastyCount> getCountByDynasty();
+
+    @Select("select sub_title as title, sub_content as content from author_detail where person_name = #{name}")
+    public List<AuthorData> getTitleAndContent(String name);
 
 }

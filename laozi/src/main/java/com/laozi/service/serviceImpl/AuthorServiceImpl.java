@@ -2,7 +2,8 @@ package com.laozi.service.serviceImpl;
 
 import com.laozi.dao.AuthorDao;
 import com.laozi.entity.author.Author;
-import com.laozi.entity.author.DynastyCount;
+import com.laozi.entity.author.AuthorData;
+import com.laozi.entity.book.DynastyCount;
 import com.laozi.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +36,6 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public int getAuthorSumByDynasty(String dynasty){
         int authorSum;
-        System.out.println("debug dynasty: " + dynasty);
         authorSum = authorDao.getAuthorCountByDynasty(dynasty);
         return authorSum;
     }
@@ -92,6 +92,12 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public List<DynastyCount> getDynastyCount(){
         List<DynastyCount> res = authorDao.getCountByDynasty();
+        return res;
+    }
+
+    @Override
+    public List<AuthorData> getAuthorDetailData(String name) {
+        List<AuthorData> res = authorDao.getTitleAndContent(name);
         return res;
     }
 }
