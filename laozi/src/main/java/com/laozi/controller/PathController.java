@@ -20,7 +20,7 @@ public class PathController {
 	//------------------------------------------------------作者
 	@RequestMapping(value = "/author")
 	public String author() {
-		return "chengyu";
+		return "author";
 	}
 	//------------------------------------------------------文献
 
