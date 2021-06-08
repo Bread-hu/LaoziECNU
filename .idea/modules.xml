@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/laozi/laozi.iml" filepath="$PROJECT_DIR$/laozi/laozi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laozi-vue/laozi-vue.iml" filepath="$PROJECT_DIR$/laozi-vue/laozi-vue.iml" />
     </modules>
   </component>
 </project>
