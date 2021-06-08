@@ -61,7 +61,7 @@ export default {
   name: "mainPage",
   data() {
     return {
-      button_list: [{title:"成语",path:"/chengyu"}, {title:"作者",path:"/zuozhe"}, {title:"文献",path:"/wenxian"}, {title:"时空间GIS",path:"/shikongjian"}, {title:"知识图谱",path:"/zhishitupu"}, {title:"老子",path:"/laozi"}],
+      button_list: [{title:"成语",path:"/chengyu"}, {title:"作者",path:"/zuozhe"}, {title:"文献",path:"/wenxian"}, {title:"时空间GIS",path:"/shikongjian"}, {title:"知识图谱",path:"/zhishitupu"}, {title:"道德经",path:"/daodejing"}],
       input1: "",
       select: "",
     };

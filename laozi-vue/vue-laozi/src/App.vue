@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import laozi from "./components/laozi";
+import daodejing from "./components/daodejing";
 import mainPage from "./components/mainPage";
 import zuozhe from "./components/zuozhe";
 import axios from "axios";
@@ -11,7 +11,7 @@ import axios from "axios";
 export default {
   name: "App",
   comments: {
-    laozi,
+    daodejing,
     mainPage,
     zuozhe
   },
@@ -24,7 +24,7 @@ export default {
         { name: "文献", path: "/wenxian" },
         { name: "时空间GIS", path: "/shikongjian" },
         { name: "知识图谱", path: "/zhishitupu" },
-        { name: "老子", path: "/laozi" },
+        { name: "老子", path: "/daodejing" },
       ],
       chapter_dao_list: [
         { index: "1-1", name: "第一章", chapter: "1" },
@@ -124,7 +124,7 @@ export default {
       //console.log(this)
       var that = this;
       this.axios({
-        url: "http://127.0.0.1:8080/laozi/daodejing",
+        url: "http://127.0.0.1:8080/daodejing/daodejing",
         method: "post",
         params: {
           chapter: item.chapter,

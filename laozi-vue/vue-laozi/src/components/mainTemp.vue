@@ -18,7 +18,7 @@
           >
         </el-menu>
         <el-carousel indicator-position="outside">
-            
+
         </el-carousel>
       </el-container>
     </el-header>
@@ -36,7 +36,7 @@ export default {
         { title: "文献", path: "/wenxian" },
         { title: "时空间GIS", path: "/shikongjian" },
         { title: "知识图谱", path: "/zhishitupu" },
-        { title: "老子", path: "/laozi" },
+        { title: "老子", path: "/daodejing" },
       ],
     };
   },

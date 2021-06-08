@@ -39,7 +39,7 @@
               <span style="font-size: 20px">{{ item.name }}</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item 
+              <el-menu-item
               v-for="num in item.maxPage"
               :key="num"
               index="item.name+num"
@@ -51,7 +51,7 @@
         </el-menu>
       </el-aside>
       <el-main>
-        
+
       </el-main>
     </el-container>
   </el-container>
@@ -89,7 +89,6 @@ export default {
     };
   },
   methods: {
-    getAuthor()
   },
 };
 </script>

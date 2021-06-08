@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import laozi from '@/components/laozi'
+import daodejing from '@/components/daodejing'
 import mainPage from '@/components/mainPage'
 import tempPage from  '@/components/mainTemp'
 import zuozhe from '@/components/zuozhe'
@@ -8,11 +8,12 @@ import zuozhe from '@/components/zuozhe'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
-      path: '/laozi',
-      name: 'laozi',
-      component: laozi
+      path: '/daodejing',
+      name: 'daodejing',
+      component: daodejing
     },
     {
       path: '/',

@@ -7,3 +7,6 @@ spring:
     username: root
     password: khstB0UekM(q
 #    password: 981218
+
+  thymeleaf:
+    cache: false

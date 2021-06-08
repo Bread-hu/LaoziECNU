@@ -101,7 +101,7 @@
 import axios from "axios";
 
 export default {
-  name: "laozi",
+  name: "daodejing",
   data() {
     return {
       button_list: [
@@ -111,7 +111,7 @@ export default {
         { name: "文献", path: "/wenxian" },
         { name: "时空间GIS", path: "/shikongjian" },
         { name: "知识图谱", path: "/zhishitupu" },
-        { name: "老子", path: "/laozi" },
+        { name: "老子", path: "/daodejing" },
       ],
       chapter_dao_list: [
         { index: "1-1", name: "第一章", chapter: "1" },
@@ -211,8 +211,9 @@ export default {
       //console.log(this)
       var that = this;
       this.axios({
-        url: "http://127.0.0.1:8080/laozi/daodejing",
+        url: "http://127.0.0.1:8080/daodejing/daodejing",
         method: "post",
+
         params: {
           chapter: item.chapter,
         },
@@ -320,7 +321,7 @@ export default {
   color: #666;
   font-size: 12px;
   line-height: 20px;
-  
+
 }
 .clearfix {
     zoom: 1;
