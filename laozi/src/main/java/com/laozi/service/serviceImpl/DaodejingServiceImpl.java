@@ -35,8 +35,8 @@ public class DaodejingServiceImpl implements DaodejingService {
     private DaodejingDao daodejingDao;
 
     @Override
-    public DaodejingIdiom getIdiom(int id) {
-        return daodejingDao.getIdiomById(id);
+    public DaodejingIdiom getIdiom(String name) {
+        return daodejingDao.getIdiomById(name);
     }
 
     @Override

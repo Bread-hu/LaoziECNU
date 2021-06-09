@@ -73,16 +73,16 @@ public class TestController {
     }
 
     // 把mysql的道德经成语插入到es中
-    @Test
-    public void insertAllIdiom() throws IOException {
-        BulkRequest bulkRequest=new BulkRequest();
-        for(int i=0;i<=51;i++){
-            DaodejingIdiom daodejingIdiom= daodejingService.getIdiom(i);
-            bulkRequest.add(new IndexRequest("daodejing_idiom").id(Integer.toString(i)).source(JSON.toJSONString(daodejingIdiom), XContentType.JSON));
-        }
-        BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
-        System.out.println(!bulkResponse.hasFailures());
-    }
+//    @Test
+//    public void insertAllIdiom() throws IOException {
+//        BulkRequest bulkRequest=new BulkRequest();
+//        for(int i=0;i<=51;i++){
+//            DaodejingIdiom daodejingIdiom= daodejingService.getIdiom(i);
+//            bulkRequest.add(new IndexRequest("daodejing_idiom").id(Integer.toString(i)).source(JSON.toJSONString(daodejingIdiom), XContentType.JSON));
+//        }
+//        BulkResponse bulkResponse=client.bulk(bulkRequest, RequestOptions.DEFAULT);
+//        System.out.println(!bulkResponse.hasFailures());
+//    }
 
 
     @Test

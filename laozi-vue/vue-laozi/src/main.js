@@ -7,15 +7,20 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import topbar from "./components/common/topbar";
 
 axios.defaults.baseURL=process.env.API_ROOT;
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
+Vue.component('top-bar',topbar)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: { App},
   template: '<App/>'
 })
+
+

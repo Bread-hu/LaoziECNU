@@ -1,28 +1,9 @@
 <template>
   <el-container>
     <el-header height="150px">
-      <el-image
-        style="margin-left: 0px; margin-top: 40px"
-        :src="require('../assets/logo.png')"
-      ></el-image>
-      <el-menu
-        default-active="activeIndex"
-        class="el-menu-demo"
-        mode="horizontal"
-        style="margin-top: -60px; margin-left: 250px"
-      >
-        <el-menu-item
-          v-for="item in button_list"
-          :key="item.name"
-          index="item.name"
-          @click="goPage(item.path)"
-          style="font-size: 35px; width: 13%"
-        >{{ item.name }}
-        </el-menu-item
-        >
-      </el-menu>
+      <top-bar></top-bar>
     </el-header>
-
+    <el-header></el-header>
     <el-container style="height: 800px; margin-top: 0px">
       <el-aside width="250px" style="margin-top: 0px">
         <el-menu
@@ -61,71 +42,90 @@
               </el-menu-item>
             </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-collection"></i>
+              <span style="font-size: 20px">成语</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item
+                v-for="item in idiom_list"
+                :key="item.index"
+                index="item.index"
+                @click="selectIdiom(item.name)"
+              >{{ item.name }}
+              </el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-main>
-        <div class="verticallines" style="margin-top: -20px">
-          <span>{{ title }}</span>
-          <br/>
-          {{ original }}
-        </div>
+<!--        <div v-if="show_idiom">-->
+<!--          <el-card class="box-card_1">-->
+<!--            <div slot="header" class="clearfix">-->
+<!--              <span style="font-size: 20px">出自</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              {{ idiom_from }}-->
+<!--            </div>-->
+<!--          </el-card>-->
+<!--          <el-card class="box-card_2">-->
+<!--            <div slot="header" class="clearfix">-->
+<!--              <span style="font-size: 20px">解释</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              {{ idiom_explanation }}-->
+<!--            </div>-->
+<!--          </el-card>-->
+<!--        </div>-->
 
-        <el-card class="box-card_1">
-          <div slot="header" class="clearfix">
-            <span style="font-size: 20px">注释</span>
-          </div>
-          <div>
-            {{ annotation }}
-          </div>
-        </el-card>
+<!--        <div v-if="show_daodejing">-->
+<!--          <div class="verticallines" style="margin-top: -20px">-->
+<!--            <span>{{ title }}</span>-->
+<!--            <br/>-->
+<!--            {{ original }}-->
+<!--          </div>-->
 
-        <el-select v-model="language" placeholder="请选择语言" @change="selectLangaue">
-          <el-option
-            v-for="item in options"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
+          <el-card class="box-card_1" style="margin-top: -20px">
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">注释</span>
+            </div>
+            <div>
+              {{ annotation }}
+            </div>
+          </el-card>
 
-        <el-card class="box-card_2">
-          <div slot="header" class="clearfix">
-            <span style="font-size: 20px">译文</span>
-          </div>
-          <div>
-            {{ translate }}
-          </div>
-        </el-card>
+<!--          <el-select v-model="language" placeholder="请选择语言" @change="selectLangaue">-->
+<!--            <el-option-->
+<!--              v-for="item in options"-->
+<!--              :key="item.value"-->
+<!--              :label="item.label"-->
+<!--              :value="item.value">-->
+<!--            </el-option>-->
+<!--          </el-select>-->
+
+<!--          <el-card class="box-card_2">-->
+<!--            <div slot="header" class="clearfix">-->
+<!--              <span style="font-size: 20px">译文</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              {{ translate }}-->
+<!--            </div>-->
+<!--          </el-card>-->
+<!--        </div>-->
       </el-main>
-    </el-container>
 
-    <!--     <el-footer class="footer" height="130px">
-          <div class="wd1180 clearfix">
-            <img src="../assets/logo-foot.png" />
-            <h5>华东师范大学</h5>
-            <p style="margin-top:-20px">闵行校区：东川路500号 200241 中山北路校区：中山北路3663号 200062</p>
-            <p style="margin-left:70px;margin-top:-10px">总机：86-21-62233333 沪ICP备05003394</p>
-          </div>
-        </el-footer> -->
+    </el-container>
   </el-container>
+
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "daodejing",
   data() {
     return {
-      button_list: [
-        {name: "首页", path: "/"},
-        {name: "成语", path: "/chengyu"},
-        {name: "作者", path: "/zuozhe"},
-        {name: "文献", path: "/wenxian"},
-        {name: "时空间GIS", path: "/shikongjian"},
-        {name: "知识图谱", path: "/zhishitupu"},
-        {name: "道德经", path: "/daodejing"},
-      ],
       options: [{value: 'translation', label: '中文'},
         {value: 'Bulgarian', label: '保加利亚语'},
         {value: 'Czech', label: '捷克语'},
@@ -239,23 +239,79 @@ export default {
         {index: "1-80", name: "第八十章", chapter: "80"},
         {index: "1-81", name: "第八十一章", chapter: "81"},
       ],
-      language:"",
-      input1: "",
-      select: "",
-      title: "第一章",
+      idiom_list: [
+        {index: "2-0", name: "玄之又玄"},
+        {index: "2-1", name: "有无相生"},
+        {index: "2-2", name: "功成不居"},
+        {index: "2-3", name: "和光同尘"},
+        {index: "2-4", name: "天地不仁"},
+        {index: "2-5", name: "天长地久"},
+        {index: "2-6", name: "上善若水"},
+        {index: "2-7", name: "金玉满堂"},
+        {index: "2-8", name: "功成身退"},
+        {index: "2-9", name: "目迷五色"},
+        {index: "2-10", name: "宠辱若惊"},
+        {index: "2-11", name: "视而不见"},
+        {index: "2-12", name: "听而不闻"},
+        {index: "2-13", name: "涣然冰释"},
+        {index: "2-14", name: "虚怀若谷"},
+        {index: "2-15", name: "绝圣弃智"},
+        {index: "2-16", name: "少私寡欲"},
+        {index: "2-17", name: "相差无几"},
+        {index: "2-18", name: "如登春台"},
+        {index: "2-19", name: "飘风骤雨"},
+        {index: "2-20", name: "余食赘行"},
+        {index: "2-21", name: "天大地大"},
+        {index: "2-22", name: "道法自然"},
+        {index: "2-23", name: "知白守黑"},
+        {index: "2-24", name: "去甚去泰"},
+        {index: "2-25", name: "天道好还"},
+        {index: "2-26", name: "佳兵不祥"},
+        {index: "2-27", name: "知止不殆"},
+        {index: "2-28", name: "自知之明"},
+        {index: "2-29", name: "淡而无味"},
+        {index: "2-30", name: "将夺固与"},
+        {index: "2-31", name: "无中生有"},
+        {index: "2-32", name: "若存若亡"},
+        {index: "2-33", name: "大器晚成"},
+        {index: "2-34", name: "大音希声"},
+        {index: "2-35", name: "知足不辱"},
+        {index: "2-36", name: "大巧若拙"},
+        {index: "2-37", name: "知足常乐"},
+        {index: "2-38", name: "出生入死"},
+        {index: "2-39", name: "祸福相依"},
+        {index: "2-40", name: "根深蒂固"},
+        {index: "2-41", name: "以德报怨"},
+        {index: "2-42", name: "轻诺寡信"},
+        {index: "2-43", name: "千里之行，始于足下"},
+        {index: "2-44", name: "慎终如始"},
+        {index: "2-45", name: "俭故能广"},
+        {index: "2-46", name: "寸进尺退"},
+        {index: "2-47", name: "被褐怀玉"},
+        {index: "2-48", name: "天网恢恢，疏而不漏"},
+        {index: "2-49", name: "小国寡民"},
+        {index: "2-50", name: "鸡犬相闻"},
+        {index: "2-51", name: "老死不相往来"},
+      ],
+      language: "",
+      title: "",
       translate: "",
       annotation: "",
-      original: "道可道非常道，名可名非常名，一生二，二生三，三生万物",
+      original: "",
+      idiom_from: "",
+      idiom_explanation: "",
+      show_daodejing: false,
+      show_idiom: false
     };
   },
   methods: {
     searchChapter(item) {
-      //console.log(this)
+      this.show_daodejing = true;
+      this.show_idiom = false;
       var that = this;
       this.axios({
         url: "/daodejing/daodejing",
         method: "post",
-
         params: {
           chapter: item.chapter,
         },
@@ -272,14 +328,35 @@ export default {
         }
       );
     },
-    // selectLangaue:function (language){
-    //   this.axios({
-    //     url:
-    //   })
-    // },
-    goPage(path) {
-      this.$router.push(path);
+    selectLangaue: function (language) {
+      var that = this
+      this.axios({
+        url: "/daodejing/selectLanguage",
+        method: 'post',
+        params: {language: language}
+      }).then(
+        function (response) {
+          that.translate = response.data;
+        }
+      )
     },
+    selectIdiom(name) {
+      this.show_idiom = true;
+      this.show_daodejing = false;
+      var that = this;
+      this.axios({
+        url: "/daodejing/selectIdiom",
+        method: 'get',
+        params: {
+          name: name
+        }
+      }).then(
+        function (response) {
+          that.idiom_from = response.data.from;
+          that.idiom_explanation = response.data.explanation
+        }
+      )
+    }
   },
 };
 </script>

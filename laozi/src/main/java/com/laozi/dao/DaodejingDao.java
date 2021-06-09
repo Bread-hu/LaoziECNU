@@ -11,6 +11,6 @@ public interface DaodejingDao {
     @Select("SELECT * FROM daodejing WHERE chapter=#{chapter}")
     public Daodejing getDaodejingByChapter(int chapter);
 
-    @Select("SELECT * FROM laozi_idiom WHERE id=#{id}")
-    public DaodejingIdiom getIdiomById(int id);
+    @Select("SELECT * FROM laozi_idiom WHERE name=#{name}")
+    public DaodejingIdiom getIdiomById(String name);
 }

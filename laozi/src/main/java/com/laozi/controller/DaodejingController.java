@@ -53,8 +53,8 @@ public class DaodejingController {
 
     @GetMapping("/selectIdiom")
     @ResponseBody
-    public DaodejingIdiom getIdiomById(int id){
-        return daodejingService.getIdiom(id);
+    public DaodejingIdiom getIdiomById(String name){
+        return daodejingService.getIdiom(name);
     }
 
 }

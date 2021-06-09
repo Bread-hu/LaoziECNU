@@ -9,7 +9,7 @@ import java.util.Map;
 
 public interface DaodejingService {
 
-    public DaodejingIdiom getIdiom(int id);
+    public DaodejingIdiom getIdiom(String name);
 
     public Daodejing getDaodejing(int chapter);
 
