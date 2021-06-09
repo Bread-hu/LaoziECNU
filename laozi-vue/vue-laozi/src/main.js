@@ -8,13 +8,14 @@ import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import topbar from "./components/common/topbar";
+import footbar from "./components/common/footbar";
 
 axios.defaults.baseURL=process.env.API_ROOT;
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 Vue.component('top-bar',topbar)
-
+Vue.component('foot-bar',footbar)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
