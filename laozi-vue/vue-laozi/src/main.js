@@ -8,6 +8,7 @@ import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+axios.defaults.baseURL=process.env.API_ROOT;
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
