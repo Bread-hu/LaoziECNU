@@ -1,4 +1,3 @@
-
 <template>
   <el-container>
     <el-header height="150px">
@@ -57,7 +56,7 @@
 
         <!--          </el-image>-->
         <!--        </el-container>-->
-        <div v-for="item in author_list" style="background-color: burlywood;height: 300px;margin-top: 20px">
+        <div v-for="item in author_list" :key="item.author_name" style="background-color: burlywood;height: 300px;margin-top: 20px">
           <img src="../assets/laozi_1.jpg" style="height: 300px;width: auto; display: inline-block" />
           <div style="display: inline-block; vertical-align: top">
             <a href="laozi">{{ item.author_name }}</a>
