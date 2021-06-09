@@ -3,6 +3,7 @@
     <el-header height="150px">
       <top-bar></top-bar>
     </el-header>
+    <el-header></el-header>
     <el-container style="height: 800px; margin-top: 0px">
       <el-aside width="250px" style="margin-top: 0px">
         <el-menu
@@ -20,7 +21,7 @@
                 v-for="item in chapter_dao_list"
                 :key="item.index"
                 index="item.index"
-                @click="searchChapter(item.chapter)"
+                @click="searchChapter(item)"
               >{{ item.name }}
               </el-menu-item
               >
@@ -36,7 +37,7 @@
                 v-for="item in chapter_de_list"
                 :key="item.index"
                 index="item.index"
-                @click="searchChapter(item.chapter)"
+                @click="searchChapter(item)"
               >{{ item.name }}
               </el-menu-item>
             </el-menu-item-group>
@@ -58,40 +59,24 @@
           </el-submenu>
         </el-menu>
       </el-aside>
-      <el-container>
-          <div class="verticallines">
-            <br/>
-            {{ original }}
+      <el-main>
+        <el-card>
+          <div slot="header" class="clearfix">
+            <span style="font-size: 20px">出自</span>
           </div>
-          <el-card>
-            <div slot="header" class="clearfix">
-              <span style="font-size: 20px">注释</span>
-            </div>
-            <div>
-              <p>{{ annotation }}</p>
-            </div>
-          </el-card>
-
-<!--          <el-select v-model="language" placeholder="请选择语言" @change="selectLangaue">-->
-<!--            <el-option-->
-<!--              v-for="item in options"-->
-<!--              :key="item.value"-->
-<!--              :label="item.label"-->
-<!--              :value="item.value">-->
-<!--            </el-option>-->
-<!--          </el-select>-->
-
-          <el-card>
-            <div slot="header" class="clearfix">
-              <span style="font-size: 20px">译文</span>
-            </div>
-            <div>
-              {{ translate }}
-            </div>
-          </el-card>
-      </el-container>
-
-
+          <div>
+            {{ idiom_from }}
+          </div>
+        </el-card>
+        <el-card>
+          <div slot="header" class="clearfix">
+            <span style="font-size: 20px">解释</span>
+          </div>
+          <div>
+            {{ idiom_explanation }}
+          </div>
+        </el-card>
+      </el-main>
     </el-container>
   </el-container>
 
@@ -270,58 +255,35 @@ export default {
         {index: "2-50", name: "鸡犬相闻"},
         {index: "2-51", name: "老死不相往来"},
       ],
-      language: "",
-      title: "",
-      translate: "",
-      annotation: "",
-      original: "",
-
+      idiom_from: "",
+      idiom_explanation: "",
     };
   },
-  created() {
-    this.searchChapter(1);
-  },
   methods: {
-    searchChapter(chapter) {
-      var that = this;
-      this.axios({
-        url: "/daodejing/daodejing",
-        method: "post",
-        params: {
-          chapter: chapter,
-        },
-      }).then(
-        function (response) {
-          that.original = response.data.original;
-          that.annotation = response.data.annotation;
-          that.translate = response.data.translation;
-        },
-        function (err) {
-          console.log(err);
-        }
-      );
-    },
-    selectLangaue: function (language) {
-      var that = this
-      this.axios({
-        url: "/daodejing/selectLanguage",
-        method: 'post',
-        params: {language: language}
-      }).then(
-        function (response) {
-          that.translate = response.data;
-        }
-      )
+    searchChapter(item) {
+
     },
     selectIdiom(name) {
+
+      var that = this;
+      this.axios({
+        url: "/daodejing/selectIdiom",
+        method: 'get',
+        params: {
+          name: name
+        }
+      }).then(
+        function (response) {
+          that.idiom_from = response.data.from;
+          that.idiom_explanation = response.data.explanation
+        }
+      )
     }
   },
 };
 </script>
 
 <style scoped>
-
-
 .input-with-select .el-input-group__prepend {
   background-color: #fff;
 }
@@ -333,6 +295,7 @@ export default {
   margin: 1em;
   padding: 2em;
   font-size: 2em;
+  margin-left: 100px;
   writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
 }
