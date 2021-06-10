@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import daodejing from '@/components/daodejing'
+import daodejing from '../components/daodejing'
 import mainPage from '@/components/mainPage'
 import tempPage from  '@/components/mainTemp'
 import zuozhe from '@/components/zuozhe'

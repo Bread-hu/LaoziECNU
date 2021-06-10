@@ -3,13 +3,13 @@
     <el-header>
       <top-bar></top-bar>
     </el-header>
-    <el-header></el-header>
     <el-container>
-      <el-aside width="250px">
+      <el-aside>
         <el-menu
           class="el-menu-vertical-demo"
           default-active="1"
-          style="border-right: 0"
+          unique-opened="true"
+          style="height: 600px"
         >
           <el-submenu index="1">
             <template slot="title">
@@ -60,53 +60,76 @@
         </el-menu>
       </el-aside>
       <el-main>
-        <el-card>
-          <div slot="header" class="clearfix">
-            <span style="font-size: 20px">原文</span>
-          </div>
-          <div>
-            {{ original }}
-          </div>
-        </el-card>
-        <el-card>
-          <div slot="header" class="clearfix">
-            <span style="font-size: 20px">注释</span>
-          </div>
-          <div>
-            {{ annotation }}
-          </div>
-        </el-card>
-        <el-card>
-          <div slot="header" class="clearfix">
-            <span style="font-size: 20px">译文</span>
-            <el-select v-model="language" placeholder="切换语言" @change="selectLangaue">
-              <el-option
-                v-for="item in options"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value">
-              </el-option>
-            </el-select>
-          </div>
-          <div>
-            {{ translate }}
-          </div>
-        </el-card>
+        <template v-if="ok">
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">原文</span>
+            </div>
+            <div>
+              {{ original }}
+            </div>
+          </el-card>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">注释</span>
+            </div>
+            <div>
+              {{ annotation }}
+            </div>
+          </el-card>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">译文</span>
+              <el-select v-model="language" placeholder="切换语言" @change="selectLanguage">
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
+            </div>
+            <div>
+              {{ translate }}
+            </div>
+          </el-card>
+        </template>
+        <template v-else>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">解释</span>
+            </div>
+            <div>
+              {{ idiom_explanation }}
+            </div>
+          </el-card>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">出自</span>
+              <el-button type="text" v-on:click="toOriginal">查看原文</el-button>
+            </div>
+            <div>
+              {{ idiom_from }}
+            </div>
+          </el-card>
+        </template>
       </el-main>
 
     </el-container>
+    <el-footer>
+      <foot-bar></foot-bar>
+    </el-footer>
   </el-container>
 
 </template>
 
 <script>
-
 export default {
   name: "daodejing",
   data() {
     return {
+      ok: true,
       language: "",
-      title: "",
       translate: "",
       annotation: "",
       original: "",
@@ -279,10 +302,11 @@ export default {
         {index: "2-50", name: "鸡犬相闻"},
         {index: "2-51", name: "老死不相往来"},
       ],
-    };
+    }
   },
   methods: {
     searchChapter(item) {
+      this.ok=true;
       var that = this;
       this.axios({
         url: "/daodejing/daodejing",
@@ -303,20 +327,8 @@ export default {
         }
       );
     },
-    selectLangaue: function (language) {
-      var that = this
-      this.axios({
-        url: "/daodejing/selectLanguage",
-        method: 'post',
-        params: {language: language}
-      }).then(
-        function (response) {
-          that.translate = response.data;
-        }
-      )
-    },
     selectIdiom(name) {
-
+      this.ok=false;
       var that = this;
       this.axios({
         url: "/daodejing/selectIdiom",
@@ -330,6 +342,21 @@ export default {
           that.idiom_explanation = response.data.explanation
         }
       )
+    },
+    selectLanguage: function (language) {
+      var that = this
+      this.axios({
+        url: "/daodejing/selectLanguage",
+        method: 'post',
+        params: {language: language}
+      }).then(
+        function (response) {
+          that.translate = response.data;
+        }
+      )
+    },
+    toOriginal(){
+
     }
   },
 };
@@ -337,68 +364,4 @@ export default {
 
 <style scoped>
 
-.input-with-select .el-input-group__prepend {
-  background-color: #fff;
-}
-
-.verticallines {
-  background-color: #eead0e;
-  font-family: "Source Han Serif SC";
-  height: 600px;
-  margin: 1em;
-  padding: 2em;
-  font-size: 2em;
-  margin-left: 100px;
-  writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-}
-
-.verticallines span {
-  color: red;
-  font-size: 2em;
-  float: left;
-  vertical-align: middle;
-}
-
-.footer {
-  color: #fff;
-  background-color: #383838;
-  padding-top: 30px;
-  bottom: 0px;
-  left: 0px;
-}
-
-.footer img {
-  float: left;
-  margin-right: 20px;
-
-}
-
-.footer h5 {
-  color: #999;
-  font-weight: bold;
-  font-size: 13px;
-  padding-bottom: 8px;
-}
-
-.footer p {
-  color: #666;
-  font-size: 12px;
-  line-height: 20px;
-
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:after {
-  content: ".";
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  display: block;
-  clear: both;
-  overflow: hidden;
-}
 </style>

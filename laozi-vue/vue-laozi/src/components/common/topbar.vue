@@ -1,9 +1,7 @@
 <template>
-<!--    <el-header height="150px">-->
   <div>
       <el-image
-        style="margin-left: 0px; margin-top: 40px"
-        :src="require('../../assets/logo.png')"
+          :src="require('../../assets/logo.png')"
       ></el-image>
       <el-menu
         default-active="activeIndex"
@@ -16,13 +14,12 @@
           :key="item.name"
           index="item.name"
           @click="goPage(item.path)"
-          style="font-size: 35px; width: 13%"
+          style="font-size: 20px"
         >{{ item.name }}
         </el-menu-item
         >
       </el-menu>
   </div>
-<!--    </el-header>-->
 </template>
 
 <script>
