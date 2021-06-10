@@ -31,6 +31,7 @@ public class BookController {
 			String name=names.get(i);
 			JSONObject re=new JSONObject();
 			re.put("book_name",name);
+			re.put("category", category);
 			out.add(re);
 		}
 		return out;

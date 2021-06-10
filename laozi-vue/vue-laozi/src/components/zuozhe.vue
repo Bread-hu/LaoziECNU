@@ -59,10 +59,17 @@
         <div v-for="item in author_list" :key="item.author_name" style="background-color: burlywood;height: 300px;margin-top: 20px">
           <img src="../assets/laozi_1.jpg" style="height: 300px;width: auto; display: inline-block" />
           <div style="display: inline-block; vertical-align: top">
-            <a href="laozi">{{ item.author_name }}</a>
+<!--            <a href="laozi">{{ item.author_name }}</a>-->
+            <el-button type="text" style="font-size: 20px" @click="getAuthorContent(item.author_name)">{{item.author_name}}</el-button>
             <p>{{ item.author_intro }}</p>
           </div>
         </div>
+        <el-dialog title="作者详细信息" :visible.sync="visible">
+          <div v-for="(item, key) in author_content.data">
+            <h2>{{key}}</h2>
+            <span>{{item}}</span>
+          </div>
+        </el-dialog>
         <!--                <div style="background-color: burlywood;height: 300px;display: block;margin-top: 20px">-->
         <!--                    <img src="../assets/laozi_1.jpg" style="height: 300px;width: auto; display: inline-block" />-->
         <!--                    <div style="display: inline-block; vertical-align: top">-->
@@ -108,7 +115,9 @@ export default {
       ],
       author_list: [
 
-      ]
+      ],
+      author_content:{},
+      visible: false
     };
   },
   created() {
@@ -178,6 +187,27 @@ export default {
         },
         function (err) {
           console.log(err);
+        }
+      )
+    },
+    getAuthorContent(author_name){
+      console.log(author_name)
+      var that = this;
+      that.visible = true;
+      this.axios({
+        url:'/authorDetail',
+        method:'post',
+        params:{
+          author_name:author_name
+        }
+      }).then(
+        function (response){
+          console.log(response)
+          console.log(response.data)
+          that.author_content = response.data
+        },
+        function (err){
+          console.log(err)
         }
       )
     }

@@ -69,7 +69,7 @@ export default {
   methods:{
     goPage(path) {
       this.$router.push(path);
-    }
+    },
   },
 };
 </script>

@@ -222,7 +222,8 @@ public class AuthorController {
 
     @PostMapping("/authorDetail")
     @ResponseBody
-    public JSONObject AuthorDetail(String author_name){
+    public JSONObject AuthorDetail(@RequestParam Map<String,Object> Pmap){
+        String author_name = (String) Pmap.get("author_name");
         System.out.println("author_name: "+ author_name);
         List<AuthorData> authorDataList = authorService.getAuthorDetailData(author_name);
         HashMap<String, String> h = new HashMap<String, String>();
