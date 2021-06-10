@@ -8,8 +8,7 @@
         <el-menu
           class="el-menu-vertical-demo"
           default-active="1"
-          unique-opened="true"
-          style="height: 600px"
+          unique-opened
         >
           <el-submenu index="1">
             <template slot="title">
@@ -60,13 +59,14 @@
         </el-menu>
       </el-aside>
       <el-main>
+        <h1 style="font:20px Extra large">{{ title }}</h1>
         <template v-if="ok">
           <el-card>
             <div slot="header" class="clearfix">
               <span style="font-size: 20px">原文</span>
             </div>
             <div>
-              {{ original }}
+              <p v-html="original"> {{ original }}</p>
             </div>
           </el-card>
           <el-card>
@@ -74,7 +74,7 @@
               <span style="font-size: 20px">注释</span>
             </div>
             <div>
-              {{ annotation }}
+              <p>{{ annotation }}</p>
             </div>
           </el-card>
           <el-card>
@@ -90,7 +90,7 @@
               </el-select>
             </div>
             <div>
-              {{ translate }}
+             <p>{{ translate }}</p>
             </div>
           </el-card>
         </template>
@@ -129,6 +129,7 @@ export default {
   data() {
     return {
       ok: true,
+      title: "",
       language: "",
       translate: "",
       annotation: "",
@@ -306,17 +307,17 @@ export default {
   },
   methods: {
     searchChapter(item) {
-      this.ok=true;
+      this.ok = true;
+      this.title = item.name;
       var that = this;
       this.axios({
-        url: "/daodejing/daodejing",
-        method: "post",
+        url: "/daodejing/selectChapter",
+        method: "get",
         params: {
           chapter: item.chapter,
         },
       }).then(
         function (response) {
-          that.title = item.name;
           console.log(response.data);
           that.original = response.data.original;
           that.annotation = response.data.annotation;
@@ -328,7 +329,8 @@ export default {
       );
     },
     selectIdiom(name) {
-      this.ok=false;
+      this.ok = false;
+      this.title = name;
       var that = this;
       this.axios({
         url: "/daodejing/selectIdiom",
@@ -355,8 +357,20 @@ export default {
         }
       )
     },
-    toOriginal(){
-
+    toOriginal() {
+      var that = this;
+      this.axios({
+        url: "/daodejing/toOriginal",
+        method: "get",
+        params: {
+          keywords: this.idiom_from
+        }
+      }).then(function (response) {
+        that.original = response.data.original;
+        that.translate = response.data.translation;
+        that.annotation = response.data.annotation;
+        that.ok = true;
+      })
     }
   },
 };

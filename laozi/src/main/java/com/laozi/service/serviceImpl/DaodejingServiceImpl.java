@@ -43,10 +43,11 @@ public class DaodejingServiceImpl implements DaodejingService {
     public Daodejing getDaodejing(int chapter) { return daodejingDao.getDaodejingByChapter(chapter); }
 
     @Override
-    public List<Map<String, Object>> searchContentHighlighter(String keywords) throws IOException {
+    public Map<String, Object> searchContentHighlighter(String keywords) throws IOException {
         SearchRequest searchRequest=new SearchRequest("daodejing");
         SearchSourceBuilder sourceBuilder=new SearchSourceBuilder();
-        sourceBuilder.query(QueryBuilders.multiMatchQuery(keywords,"original","annotation","translation").field("original",3));
+        sourceBuilder.query(QueryBuilders.matchQuery("original",keywords));
+        sourceBuilder.size(1);
         HighlightBuilder highlightBuilder=new HighlightBuilder();
         highlightBuilder.field("original");
         highlightBuilder.preTags("<span style=\"color:red\">");
@@ -70,7 +71,7 @@ public class DaodejingServiceImpl implements DaodejingService {
             }
             list.add(source);
         }
-        return list;
+        return list.get(0);
     }
 
 }

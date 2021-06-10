@@ -13,5 +13,5 @@ public interface DaodejingService {
 
     public Daodejing getDaodejing(int chapter);
 
-    public List<Map<String,Object>> searchContentHighlighter(String keywords) throws IOException;
+    public Map<String,Object> searchContentHighlighter(String keywords) throws IOException;
 }
