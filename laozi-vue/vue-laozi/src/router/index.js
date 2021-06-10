@@ -5,7 +5,8 @@ import mainPage from '@/components/mainPage'
 import tempPage from  '@/components/mainTemp'
 import zuozhe from '@/components/zuozhe'
 import chengyu from '@/components/chengyu'
-import wenxian from "../components/wenxian";
+import wenxian from '@/components/wenxian'
+import zhishitupu from '@/components/zhishitupu'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path:'/wenxian',
       name:'wenxian',
       component: wenxian
+    },
+    {
+      path: '/zhishitupu',
+      name: 'zhishitupu',
+      component: zhishitupu
     }
   ]
 })

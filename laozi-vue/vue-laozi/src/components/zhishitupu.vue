@@ -31,7 +31,7 @@
 
         </el-aside>
 
-        <el-main>
+        <el-main style="background-color: #272b30">
 
         </el-main>
       </el-container>
@@ -39,7 +39,23 @@
 </template>
 
 <script>
-
+import * as d3 from 'd3'
+export default {
+  name: 'zhishitupu',
+  data(){
+    return {
+      button_list: [
+        {name: "首页", path: "/"},
+        {name: "成语", path: "/chengyu"},
+        {name: "作者", path: "/zuozhe"},
+        {name: "文献", path: "/wenxian"},
+        {name: "时空间GIS", path: "/shikongjian"},
+        {name: "知识图谱", path: "/zhishitupu"},
+        {name: "老子", path: "/laozi"},
+      ]
+    }
+  }
+}
 </script>
 
 <style scoped>

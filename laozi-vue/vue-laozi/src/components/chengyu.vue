@@ -37,15 +37,28 @@
                 <i class="el-icon-collection"></i>
                 <span style="font-size: 20px">{{ item.name }}</span>
               </template>
-              <el-menu-item-group>
+<!--              <el-menu-item-group>-->
+<!--                <el-menu-item-->
+<!--                  v-for="head in item.head_list"-->
+<!--                  :key="head"-->
+<!--                  index="head"-->
+<!--                  @click="getChengyu(head)">-->
+<!--                  {{head}}-->
+<!--                </el-menu-item>-->
+<!--              </el-menu-item-group>-->
+              <el-submenu
+                v-for="head in item.head_list"
+                :key="head"
+                :index="head"
+              >
+                <template slot="title">{{head}}</template>
                 <el-menu-item
-                  v-for="head in item.head_list"
-                  :key="head"
-                  index="head"
-                  @click="getChengyu(head)">
-                  {{head}}
+                  v-for="num in 3"
+                  :key="num"
+                  :index="num">
+                  {{num}}
                 </el-menu-item>
-              </el-menu-item-group>
+              </el-submenu>
             </el-submenu>
           </el-menu>
         </el-aside>
@@ -58,6 +71,7 @@
     name: 'chengyu',
     data(){
       return{
+        chengyu_json:{},
         button_list: [
           { name: "首页", path: "/" },
           { name: "成语", path: "/chengyu" },
