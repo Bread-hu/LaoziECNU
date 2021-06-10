@@ -43,6 +43,7 @@ public class DaodejingController {
     @GetMapping("/search")
     @ResponseBody
     public List<Map<String,Object>> search(@RequestParam String keywords) throws IOException {
+        System.out.println(keywords);
         return daodejingService.searchContentHighlighter(keywords);
     }
 
