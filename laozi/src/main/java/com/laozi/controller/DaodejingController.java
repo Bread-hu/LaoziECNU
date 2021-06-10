@@ -27,28 +27,28 @@ public class DaodejingController {
         return "daodejing";
     }
 
-    @PostMapping("/daodejing")
+    @GetMapping("/selectChapter")
     @ResponseBody
     public Daodejing getContentByChapter(int chapter){
         this.daodejing= daodejingService.getDaodejing(chapter);
         return this.daodejing;
     }
 
-    @PostMapping("/selectLanguage")
+    @GetMapping("/selectLanguage")
     @ResponseBody
     public String selectLanguage(String language) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         return (String) this.daodejing.getClass().getMethod("get"+language,new Class[]{}).invoke(this.daodejing,new Object[]{});
     }
 
-    @GetMapping("/search")
+    @GetMapping("/toOriginal")
     @ResponseBody
-    public List<Map<String,Object>> search(@RequestParam String keywords) throws IOException {
+    public Map<String,Object> toOriginal(@RequestParam String keywords) throws IOException {
         return daodejingService.searchContentHighlighter(keywords);
     }
 
-    @GetMapping("/daodejingIdiom")
+    @GetMapping("/daodejingidiom")
     public String toDaodejingIdiom(){
-        return "daodejingIdiom";
+        return "daodejingidiom";
     }
 
     @GetMapping("/selectIdiom")
