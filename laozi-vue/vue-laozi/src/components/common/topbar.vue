@@ -2,12 +2,13 @@
   <div>
       <el-image
           :src="require('../../assets/logo.png')"
+          style="display: inline-block"
       ></el-image>
       <el-menu
         default-active="activeIndex"
         class="el-menu-demo"
         mode="horizontal"
-        style="margin-top: -60px; margin-left: 250px"
+        style="display: inline-block;width: 40%;vertical-align:middle"
       >
         <el-menu-item
           v-for="item in button_list"
@@ -19,6 +20,25 @@
         </el-menu-item
         >
       </el-menu>
+    <div style="display: inline-block; width: 30%; ">
+      <el-input
+        placeholder="请输入内容"
+        v-model="input1"
+        class="input-with-select"
+      >
+        <el-select
+          style="width: 100px"
+          v-model="select"
+          slot="prepend"
+          placeholder="请选择"
+        >
+          <el-option label="成语" value="1"></el-option>
+          <el-option label="老子" value="2"></el-option>
+          <el-option label="作者" value="3"></el-option>
+        </el-select>
+        <el-button slot="append" icon="el-icon-search"></el-button>
+      </el-input>
+    </div>
   </div>
 </template>
 
