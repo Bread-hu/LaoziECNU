@@ -65,7 +65,7 @@
           </div>
         </div>
         <el-dialog title="作者详细信息" :visible.sync="visible">
-          <div v-for="(item, key) in author_content.data">
+          <div v-for="(item, key) in author_content.data" :key="key" :index="key">
             <h2>{{key}}</h2>
             <span>{{item}}</span>
           </div>
@@ -139,7 +139,7 @@ export default {
     //   }
     // )
     this.axios({
-      url: "http://127.0.0.1:8080/dynastycount",
+      url: "/dynastycount",
       method: "post",
       params:{
       },
@@ -174,7 +174,7 @@ export default {
     getAuthor(dynasty,num){
       var that = this;
       this.axios({
-        url: "http://127.0.0.1:8080/page",
+        url: "/page",
         method: "post",
         params:{
           dynasty: dynasty,

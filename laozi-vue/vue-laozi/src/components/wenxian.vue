@@ -1,4 +1,4 @@
-<template xmlns="http://www.w3.org/1999/html">
+<template>
     <el-container>
       <el-header height="150px">
         <el-image
