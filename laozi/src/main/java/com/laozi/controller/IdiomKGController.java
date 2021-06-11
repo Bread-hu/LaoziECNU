@@ -31,6 +31,7 @@ public class IdiomKGController {
 			JSONObject cy = new JSONObject();
 			cy.put("id",chengYu.getId());
 			cy.put("idiom",chengYu.getIdiom());
+			cy.put("name",firstPhonetic);
 			out.add(cy);
 		}
 		return out;

@@ -1,14 +1,14 @@
 <template>
   <el-container>
-    <el-header height="150px">
+    <el-header>
       <top-bar></top-bar>
     </el-header>
-    <el-container style="height: 800px; margin-top: 0px">
-      <el-aside width="250px" style="margin-top: 0px">
+    <el-container>
+      <el-aside>
         <el-menu
           class="el-menu-vertical-demo"
           default-active="1"
-          style="border-right: 0"
+          unique-opened
         >
           <el-submenu index="1">
             <template slot="title">
@@ -20,7 +20,7 @@
                 v-for="item in chapter_dao_list"
                 :key="item.index"
                 index="item.index"
-                @click="searchChapter(item.chapter)"
+                @click="searchChapter(item)"
               >{{ item.name }}
               </el-menu-item
               >
@@ -36,7 +36,7 @@
                 v-for="item in chapter_de_list"
                 :key="item.index"
                 index="item.index"
-                @click="searchChapter(item.chapter)"
+                @click="searchChapter(item)"
               >{{ item.name }}
               </el-menu-item>
             </el-menu-item-group>
@@ -58,11 +58,17 @@
           </el-submenu>
         </el-menu>
       </el-aside>
-      <el-container>
-          <div class="verticallines">
-            <br/>
-            {{ original }}
-          </div>
+      <el-main>
+        <h1 style="font:20px Extra large">{{ title }}</h1>
+        <template v-if="ok">
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">原文</span>
+            </div>
+            <div>
+              <p v-html="original"> {{ original }}</p>
+            </div>
+          </el-card>
           <el-card>
             <div slot="header" class="clearfix">
               <span style="font-size: 20px">注释</span>
@@ -71,38 +77,65 @@
               <p>{{ annotation }}</p>
             </div>
           </el-card>
-
-<!--          <el-select v-model="language" placeholder="请选择语言" @change="selectLangaue">-->
-<!--            <el-option-->
-<!--              v-for="item in options"-->
-<!--              :key="item.value"-->
-<!--              :label="item.label"-->
-<!--              :value="item.value">-->
-<!--            </el-option>-->
-<!--          </el-select>-->
-
           <el-card>
             <div slot="header" class="clearfix">
               <span style="font-size: 20px">译文</span>
+              <el-select v-model="language" placeholder="切换语言" @change="selectLanguage">
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
             </div>
             <div>
-              {{ translate }}
+             <p>{{ translate }}</p>
             </div>
           </el-card>
-      </el-container>
-
+        </template>
+        <template v-else>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">解释</span>
+            </div>
+            <div>
+              {{ idiom_explanation }}
+            </div>
+          </el-card>
+          <el-card>
+            <div slot="header" class="clearfix">
+              <span style="font-size: 20px">出自</span>
+              <el-button type="text" v-on:click="toOriginal">查看原文</el-button>
+            </div>
+            <div>
+              {{ idiom_from }}
+            </div>
+          </el-card>
+        </template>
+      </el-main>
 
     </el-container>
+    <el-footer>
+      <foot-bar></foot-bar>
+    </el-footer>
   </el-container>
 
 </template>
 
 <script>
-
 export default {
   name: "daodejing",
   data() {
     return {
+      ok: true,
+      title: "",
+      language: "",
+      translate: "",
+      annotation: "",
+      original: "",
+      idiom_from: "",
+      idiom_explanation: "",
       options: [{value: 'translation', label: '中文'},
         {value: 'Bulgarian', label: '保加利亚语'},
         {value: 'Czech', label: '捷克语'},
@@ -270,28 +303,22 @@ export default {
         {index: "2-50", name: "鸡犬相闻"},
         {index: "2-51", name: "老死不相往来"},
       ],
-      language: "",
-      title: "",
-      translate: "",
-      annotation: "",
-      original: "",
-
-    };
-  },
-  created() {
-    this.searchChapter(1);
+    }
   },
   methods: {
-    searchChapter(chapter) {
+    searchChapter(item) {
+      this.ok = true;
+      this.title = item.name;
       var that = this;
       this.axios({
-        url: "/daodejing/daodejing",
-        method: "post",
+        url: "/daodejing/selectChapter",
+        method: "get",
         params: {
-          chapter: chapter,
+          chapter: item.chapter,
         },
       }).then(
         function (response) {
+          console.log(response.data);
           that.original = response.data.original;
           that.annotation = response.data.annotation;
           that.translate = response.data.translation;
@@ -301,7 +328,24 @@ export default {
         }
       );
     },
-    selectLangaue: function (language) {
+    selectIdiom(name) {
+      this.ok = false;
+      this.title = name;
+      var that = this;
+      this.axios({
+        url: "/daodejing/selectIdiom",
+        method: 'get',
+        params: {
+          name: name
+        }
+      }).then(
+        function (response) {
+          that.idiom_from = response.data.from;
+          that.idiom_explanation = response.data.explanation
+        }
+      )
+    },
+    selectLanguage: function (language) {
       var that = this
       this.axios({
         url: "/daodejing/selectLanguage",
@@ -313,7 +357,20 @@ export default {
         }
       )
     },
-    selectIdiom(name) {
+    toOriginal() {
+      var that = this;
+      this.axios({
+        url: "/daodejing/toOriginal",
+        method: "get",
+        params: {
+          keywords: this.idiom_from
+        }
+      }).then(function (response) {
+        that.original = response.data.original;
+        that.translate = response.data.translation;
+        that.annotation = response.data.annotation;
+        that.ok = true;
+      })
     }
   },
 };
@@ -321,60 +378,4 @@ export default {
 
 <style scoped>
 
-
-.input-with-select .el-input-group__prepend {
-  background-color: #fff;
-}
-
-.verticallines {
-  background-color: #eead0e;
-  font-family: "Source Han Serif SC";
-  height: 600px;
-  margin: 1em;
-  padding: 2em;
-  font-size: 2em;
-  writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-}
-
-.verticallines span {
-  color: red;
-  font-size: 2em;
-  float: left;
-  vertical-align: middle;
-}
-
-.footer img {
-  float: left;
-  margin-right: 20px;
-
-}
-
-.footer h5 {
-  color: #999;
-  font-weight: bold;
-  font-size: 13px;
-  padding-bottom: 8px;
-}
-
-.footer p {
-  color: #666;
-  font-size: 12px;
-  line-height: 20px;
-
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:after {
-  content: ".";
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  display: block;
-  clear: both;
-  overflow: hidden;
-}
 </style>

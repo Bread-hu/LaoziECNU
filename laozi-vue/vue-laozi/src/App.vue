@@ -6,13 +6,19 @@
 import daodejing from "./components/daodejing";
 import mainPage from "./components/mainPage";
 import zuozhe from "./components/zuozhe";
+import chengyu from "./components/chengyu";
+import wenxian  from "./components/wenxian";
+import zhishitupu from "./components/zhishitupu";
 
 export default {
   name: "App",
   comments: {
     daodejing,
     mainPage,
-    zuozhe
+    zuozhe,
+    chengyu,
+    wenxian,
+    zhishitupu
   },
   data() {
     return {
