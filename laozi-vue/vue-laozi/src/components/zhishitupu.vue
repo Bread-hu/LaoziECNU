@@ -1,29 +1,7 @@
 <template>
     <el-container>
-      <el-header height="150px">
-        <el-image
-          style="margin-left: 0px; margin-top: 40px"
-          :src="require('../assets/logo.png')"
-        ></el-image>
-        <el-menu
-          default-active="activeIndex"
-          class="el-menu-demo"
-          mode="horizontal"
-          style="margin-top: -60px; margin-left: 250px"
-        >
-          <el-menu-item
-            v-for="item in button_list"
-            :key="item.name"
-            index="item.name"
-            @click="goPage(item.path)"
-            style="font-size: 35px; width: 13%"
-          >
-            <template slot="title">
-              <span style="font-size: 20px">{{ item.name }}</span>
-            </template>
-
-          </el-menu-item>
-        </el-menu>
+      <el-header>
+        <top-bar></top-bar>
       </el-header>
 
       <el-container>
@@ -54,6 +32,25 @@ export default {
         {name: "老子", path: "/laozi"},
       ]
     }
+  },
+  methods:{
+    d3init(){
+      this.links = this.data.links
+      this.nodes = this.data.nodes
+      this.svgDom = d3.select("#svg")
+      this.d3render()
+      this.stateInit()
+    },
+    stateInit(){
+      this.nodeState = 0
+      this.textState = 0
+      // console.log(this.names)
+      this.states = Array(this.names.length).fill('on')
+    },
+    d3render(){
+      var _this = this
+
+    },
   }
 }
 </script>
