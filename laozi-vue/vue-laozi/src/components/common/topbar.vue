@@ -2,7 +2,7 @@
   <div>
       <el-image
           :src="require('../../assets/logo.png')"
-          style="display: inline-block"
+          style="display: inline-block;vertical-align:middle"
       ></el-image>
       <el-menu
         default-active="activeIndex"
@@ -20,7 +20,7 @@
         </el-menu-item
         >
       </el-menu>
-    <div style="display: inline-block; width: 30%; ">
+    <div style="display: inline-block; width: 30%; vertical-align:middle">
       <el-input
         placeholder="请输入内容"
         v-model="input1"

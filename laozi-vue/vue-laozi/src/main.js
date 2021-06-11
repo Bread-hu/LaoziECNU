@@ -7,6 +7,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import './assets/css/global.css'
 import topbar from "./components/common/topbar";
 import footbar from "./components/common/footbar"
 

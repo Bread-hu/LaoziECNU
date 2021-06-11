@@ -195,7 +195,7 @@ export default {
 
 <style scoped>
 p{
-  width: 1500px;
+  width: 1300px;
   word-wrap: break-word;
   word-break: break-all;
 }
