@@ -1,33 +1,34 @@
 <template>
-  <div>
+  <div style="text-align:center">
       <el-image
           :src="require('../../assets/logo.png')"
-          style="display: inline-block;vertical-align:middle"
+          style="display: inline-block;vertical-align:middle;"
       ></el-image>
       <el-menu
         default-active="activeIndex"
         class="el-menu-demo"
         mode="horizontal"
-        style="display: inline-block;width: 40%;vertical-align:middle"
+        style="display: inline-block;width: 35%;vertical-align:middle;border-bottom: none"
       >
         <el-menu-item
           v-for="item in button_list"
           :key="item.name"
           index="item.name"
           @click="goPage(item.path)"
-          style="font-size: 20px"
+          style="font-size: 15px"
         >{{ item.name }}
         </el-menu-item
         >
       </el-menu>
-    <div style="display: inline-block; width: 30%; vertical-align:middle">
+    <div style="display: inline-block; width: 25%; vertical-align:middle">
       <el-input
         placeholder="请输入内容"
         v-model="input1"
         class="input-with-select"
+        style="font-size: 10px"
       >
         <el-select
-          style="width: 100px"
+          style="width: 100px; font-size:8px "
           v-model="select"
           slot="prepend"
           placeholder="请选择"
