@@ -64,7 +64,7 @@
             </el-submenu>
           </el-menu>
         </el-aside>
-        <el-main>
+        <el-main class="main_block">
 <!--          <el-popover-->
 <!--            placement="top"-->
 <!--            width="400"-->
@@ -87,28 +87,88 @@
 <!--            </div>-->
 <!--            <el-button slot="reference">删除</el-button>-->
 <!--          </el-popover>-->
-          <div v-for="item in chengyu_list" :key="item.id" :index="item.id" type="text">
-          <el-button type="text" style="display: block" @click="getContent(item.id)">{{item.idiom}}</el-button>
-            <el-divider></el-divider>
-          </div>
+<!--          <div v-for="item in chengyu_list" :key="item.id" :index="item.id" type="text">-->
+<!--          <el-button type="text" style="display: block" @click="getContent(item.id)">{{item.idiom}}</el-button>-->
+<!--            <el-divider></el-divider>-->
+<!--          </div>-->
 
-          <el-dialog title="成语详解" :visible.sync="visible">
-            <h2>成语拼音</h2>
-            <span>{{ chengyu_content.idiomPhonetic }}</span>
-            <h2>成语出处</h2>
-            <span>{{ chengyu_content.allusion }}</span>
-            <h2>成语示例</h2>
-            <span>{{ chengyu_content.example }}</span>
-            <h2>成语解释</h2>
-            <span>{{ chengyu_content.explanation }}</span>
-            <h2>成语语法</h2>
-            <span>{{ chengyu_content.grammar }}</span>
-            <h2>成语结构</h2>
-            <span>{{ chengyu_content.structure }}</span>
-            <h2>近义词</h2>
-            <span>{{chengyu_content.similar}}</span>
-          </el-dialog>
+<!--          <el-dialog title="成语详解" :visible.sync="visible">-->
+<!--            <h2>成语拼音</h2>-->
+<!--            <span>{{ chengyu_content.idiomPhonetic }}</span>-->
+<!--            <h2>成语出处</h2>-->
+<!--            <span>{{ chengyu_content.allusion }}</span>-->
+<!--            <h2>成语示例</h2>-->
+<!--            <span>{{ chengyu_content.example }}</span>-->
+<!--            <h2>成语解释</h2>-->
+<!--            <span>{{ chengyu_content.explanation }}</span>-->
+<!--            <h2>成语语法</h2>-->
+<!--            <span>{{ chengyu_content.grammar }}</span>-->
+<!--            <h2>成语结构</h2>-->
+<!--            <span>{{ chengyu_content.structure }}</span>-->
+<!--            <h2>近义词</h2>-->
+<!--            <span>{{chengyu_content.similar}}</span>-->
+<!--          </el-dialog>-->
+        <div class="mcon" style="margin-top: 10px">
+          <h3>成语列表</h3>
+          <ul class="btn w4">
+          <li>
+            <a href="www.baidu.com" target="_blank">不堪入目</a>
+          </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">
 
+              </a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+            <li>
+              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            </li>
+          </ul>
+        </div>
         </el-main>
       </el-container>
     </el-container>
@@ -264,5 +324,91 @@ p{
   width: 1500px;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+.mcon{
+  background-color: #ebeee9;
+  padding: 50px;
+}
+
+.main_block {
+  color: #333;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+ul {
+  list-style-type: disc;
+}
+
+ul.btn li{
+  float: left;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  blur: expression(this.onFocus=this.blur());
+
+}
+
+.mtitle a, .mcon a, .otitle a {
+  text-decoration: underline;
+}
+
+
+
+li{
+  text-align: -webkit-match-parent;
+}
+
+ul, ol, menu{
+  list-style: none;
+}
+
+ul.btn li a {
+  over-flow: hidden;
+  font-size: 18px;
+  text-decoration: none;
+  width: auto;
+  height: auto;
+  padding: 15px 20px;
+  border: 1px solid #e5e7e4;
+  background-color: #e5e7e4;
+  display: block;
+  text-align: center;
+}
+
+ul.btn li a{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+ul.w4 li a{
+  margin: 12px 6px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+::selection {
+  background-color: #a4a288;
+  color: #fff;
+}
+ul.btn li a:hover {
+  box-shadow: rgb(235 234 226) 2px 2px 10px 0px, rgb(122 122 119 / 30%) 2px 2px 10px 0px;
+}
+
+ul.btn li a:hover, ul.btn li.cur a {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #c5653e;
+}
+.mtitle a:hover, .mcon a:hover, .otitle a:hover {
 }
 </style>
