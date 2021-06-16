@@ -108,7 +108,8 @@
 <!--            <h2>近义词</h2>-->
 <!--            <span>{{chengyu_content.similar}}</span>-->
 <!--          </el-dialog>-->
-        <div class="mcon" style="margin-top: 10px">
+        <div class="divbg">
+        <div class="mcon" style="margin-top: 10px;text-align:center;margin:0 auto">
           <h3>成语列表</h3>
           <ul class="btn w4">
           <li>
@@ -168,6 +169,7 @@
               <a href="www.baidu.com" target="_blank">不堪入目</a>
             </li>
           </ul>
+        </div>
         </div>
         </el-main>
       </el-container>
@@ -326,9 +328,18 @@ p{
   word-break: break-all;
 }
 
+.divbg{
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url("../assets/bg.jpg");
+}
+
 .mcon{
   background-color: #ebeee9;
   padding: 50px;
+  width: 40%;
+  height: 90%;
 }
 
 .main_block {

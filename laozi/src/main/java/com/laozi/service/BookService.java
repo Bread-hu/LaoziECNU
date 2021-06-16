@@ -7,7 +7,7 @@ import com.laozi.entity.book.SubBook;
 import java.util.List;
 
 public interface BookService {
-	List<String> getBookNamesByCategory(String category,int page);
+	List<Book> getBookNamesByCategory(String category,int page);
 	Book getBookByName(String book_name);
 	List<SubBook> getSubBookByBookId(String book_id);
 	BookContent   getBookContent(String subook_id, String subook_name, String subsubook_name);

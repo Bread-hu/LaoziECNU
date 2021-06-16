@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div style="text-align: center;margin: 0 auto">
       <el-image
           :src="require('../../assets/logo.png')"
-          style="display: inline-block"
+          style="display: inline-block;vertical-align:middle"
       ></el-image>
       <el-menu
         default-active="activeIndex"
         class="el-menu-demo"
         mode="horizontal"
-        style="display: inline-block;width: 40%;vertical-align:middle"
+        style="display: inline-block;width: 40%;vertical-align:middle;border: none"
       >
         <el-menu-item
           v-for="item in button_list"
@@ -20,7 +20,7 @@
         </el-menu-item
         >
       </el-menu>
-    <div style="display: inline-block; width: 30%; ">
+    <div style="display: inline-block; width: 25%; vertical-align:middle">
       <el-input
         placeholder="请输入内容"
         v-model="input1"
@@ -47,6 +47,8 @@ export default {
   name: "topbar",
   data() {
     return {
+      input1 : undefined,
+      select: undefined,
       button_list: [
         {name: "首页", path: "/"},
         {name: "成语", path: "/chengyu"},

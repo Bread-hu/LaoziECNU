@@ -1,4 +1,11 @@
 <template>
+<el-container>
+
+  <el-header>
+    <top-bar></top-bar>
+  </el-header>
+  <el-container>
+    <el-main style="margin-top: 20px">
   <div class="gContainer">
     <!-- <d3graph /> -->
     <gSearch @getData="update" />
@@ -9,12 +16,18 @@
       :linkTypes="linkTypes"
     />
   </div>
+    </el-main>
+  </el-container>
+</el-container>
+
 </template>
 
 <script>
-import gSearch from '@/components/gSearch.vue'
-import d3graph from '@/components/d3graph.vue'
+import gSearch from './common/gSearch.vue'
+import d3graph from './common/d3graph.vue'
+
 export default {
+
   components: {
     gSearch,
     d3graph

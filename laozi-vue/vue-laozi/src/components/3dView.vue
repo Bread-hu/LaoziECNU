@@ -13,8 +13,8 @@
 
 <script>
 // @ is an alias to /src
-import gSearch from '@/components/gSearch.vue'
-import threeGraph from '@/components/threeGraph.vue'
+import gSearch from '../components/gSearch.vue'
+import threeGraph from '../components/threeGraph.vue'
 
 export default {
   name: 'threeView',

@@ -16,7 +16,7 @@ public class BookServiceImpl implements BookService {
 	private BookDao bookDao;
 
 	@Override
-	public List<String> getBookNamesByCategory(String category, int page) {
+	public List<Book> getBookNamesByCategory(String category, int page) {
 		return bookDao.getBookNamesByCategory(category,page*50,(page+1)*50);
 	}
 	@Override

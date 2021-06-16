@@ -4,53 +4,67 @@
         <top-bar></top-bar>
       </el-header>
       <el-container style="margin-top: 0px; height: 100%">
-        <el-aside width="250px" style="margin-top: 0px">
+        <el-aside width="250px" style="margin-top: 0px;height: 2000px">
           <el-menu
             class="el-menu-vertical-demo"
             default-active="1"
             style="border-right: 0"
           >
-            <el-submenu v-for="(item, key) in main_book_list" :key="key" :index="key">
-              <template slot="title">
+            <el-menu-item v-for="(item, key) in main_book_list" :key="key" :index="key" @click="getBookList(item)">
+
                 <i class="el-icon-collection"></i>
                 <span style="font-size: 20px">{{ key }}</span>
-              </template>
-              <el-menu-item-group>
-                <el-menu-item
-                  v-for="head in item"
-                  :key="head.book_name"
-                  :index="head.book_name"
-                  @click="getBook(head.book_name)"
-                  >
-                  {{head.book_name}}
-                </el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
+
+<!--              <el-menu-item-group>-->
+<!--                <el-menu-item-->
+<!--                  v-for="head in item"-->
+<!--                  :key="head.book_name"-->
+<!--                  :index="head.book_name"-->
+<!--                  @click="getBook(head.book_name)"-->
+<!--                  >-->
+<!--                  {{head.book_name}}-->
+<!--                </el-menu-item>-->
+<!--              </el-menu-item-group>-->
+            </el-menu-item>
           </el-menu>
         </el-aside>
-        <el-main>
-<!--          <p>{{book_content.book_name}}</p>-->
-          <h2>书名</h2>
-
-          <h1>{{book_content.book_name}}</h1>
-          <el-divider></el-divider>
-          <h2>时代</h2>
-          <h1>{{book_content.dynasty}}</h1>
-          <el-divider></el-divider>
-          <h2>简介</h2>
-
-          <p>{{book_content.introduction}}</p>
-          <el-divider></el-divider>
-
-          <h2>章节</h2>
-          <div v-for="item in chapter_list" :key="item.subook_id" :index="item.subook_id">
-          <el-button type="text" style="font-size: 20px" @click="getSubook(item)">{{item.subsubook_name}}</el-button>
-            <el-divider></el-divider>
+        <el-main class="main_block">
+          <div class="divbg">
+            <div class="mcon" style="margin-top: 10px;text-align:center;margin:0 auto">
+              <div v-for="item in show_book_list" :key="item.book_name" :index="item.book_name" style="height:auto ">
+                <img src="../assets/laozi_book.jpg" style="width: auto; display: inline-block" />
+                <div style="display: inline-block;vertical-align: top">
+                  <el-button type="text" style="font-size: 15px" @click="getSubook"></el-button>
+                </div>
+              </div>
+                <button v-for="num in page_num" :key="num" :index="num" @click="goNum(num)" class="button_css">{{num}}</button>
+            </div>
+<!--            <div v-for="item in show_book_list" :key="item.book_name" :index="item.book_name" style="height:auto ">-->
+<!--              -->
+<!--            </div>-->
           </div>
+<!--          <p>{{book_content.book_name}}</p>-->
+<!--          <h2>书名</h2>-->
 
-          <el-dialog title="具体章节" :visible.sync="visible">
-            <span>{{ subook_content }}</span>
-          </el-dialog>
+<!--          <h1>{{book_content.book_name}}</h1>-->
+<!--          <el-divider></el-divider>-->
+<!--          <h2>时代</h2>-->
+<!--          <h1>{{book_content.dynasty}}</h1>-->
+<!--          <el-divider></el-divider>-->
+<!--          <h2>简介</h2>-->
+
+<!--          <p>{{book_content.introduction}}</p>-->
+<!--          <el-divider></el-divider>-->
+
+<!--          <h2>章节</h2>-->
+<!--          <div v-for="item in chapter_list" :key="item.subook_id" :index="item.subook_id">-->
+<!--          <el-button type="text" style="font-size: 20px" @click="getSubook(item)">{{item.subsubook_name}}</el-button>-->
+<!--            <el-divider></el-divider>-->
+<!--          </div>-->
+
+<!--          <el-dialog title="具体章节" :visible.sync="visible">-->
+<!--            <span>{{ subook_content }}</span>-->
+<!--          </el-dialog>-->
 
         </el-main>
       </el-container>
@@ -62,6 +76,12 @@
     name: 'wenxian',
     data(){
       return {
+
+        show_book_list:[],
+        page_num:0,
+        show_num:10,
+        now_page:1,
+
         button_list: [
           {name: "首页", path: "/"},
           {name: "成语", path: "/chengyu"},
@@ -95,12 +115,20 @@
           function (response){
             console.log(response.data)
             that.main_book_list[response.data[0].category] = response.data
+            if(response.data[0].category == "经部"){
+              console.log(response.data.length)
+              that.show_book_list = response.data.slice(0,10)
+              that.now_page = 1
+              that.page_num = parseInt(response.data.length/that.show_num) + 1
+              console.log(that.page_num)
+            }
           },
           function (err){
             console.log(err)
           }
         )
       }
+
       // for (var i=0;i<keys.length;i++){
       //   console.log(that.main_book_list[i])
       // }
@@ -190,8 +218,19 @@
             console.log(err)
           }
         )
+      },
+      getBookList(item){
+        console.log(item)
+        var that = this;
+        that.page_num = parseInt(item.length / that.show_num) + 1;
+        that.now_page = 1;
+        that.show_book_list = item.slice((that.now_page-1)*that.show_num, that.now_page*that.show_num)
+      },
+      goNum(num){
+        var that = this
       }
     },
+
 
   }
 </script>
@@ -201,6 +240,30 @@ p{
   width: 1500px;
   word-wrap: break-word;
   word-break: break-all;
+}
+.button_css{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main_block {
+  color: #333;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.divbg{
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url("../assets/bg.jpg");
+}
+.mcon{
+  background-color: #ebeee9;
+  padding: 50px;
+  width: 60%;
+  height: 90%;
 }
 </style>
 

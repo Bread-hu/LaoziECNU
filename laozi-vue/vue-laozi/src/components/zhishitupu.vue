@@ -1,19 +1,7 @@
 <template>
-    <el-container>
-      <el-header>
-        <top-bar></top-bar>
-      </el-header>
+  <router-view>
 
-      <el-container>
-        <el-aside>
-
-        </el-aside>
-
-        <el-main style="background-color: #272b30">
-
-        </el-main>
-      </el-container>
-    </el-container>
+  </router-view>
 </template>
 
 <script>

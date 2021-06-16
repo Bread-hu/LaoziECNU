@@ -8,7 +8,8 @@ import mainPage from "./components/mainPage";
 import zuozhe from "./components/zuozhe";
 import chengyu from "./components/chengyu";
 import wenxian  from "./components/wenxian";
-import zhishitupu from "./components/zhishitupu";
+// import zhishitupu from "./components/zhishitupu";
+import zhishitupu from  "./components/2dView"
 
 export default {
   name: "App",

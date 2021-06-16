@@ -11,8 +11,8 @@ import java.util.List;
 @Mapper
 public interface BookDao {
 
-     @Select("SELECT book_name FROM core_books_data WHERE `category` = #{category}  limit  #{start} , #{end}")
-     List<String> getBookNamesByCategory(String category,int start,int end);
+     @Select("SELECT * FROM core_books_data WHERE `category` = #{category}  limit  #{start} , #{end}")
+     List<Book> getBookNamesByCategory(String category,int start,int end);
 
      @Select("SELECT * FROM core_books_data WHERE `book_name` = #{book_name} limit 1")
      Book getBookByName(String book_name);

@@ -112,7 +112,9 @@
 
 <script>
 import * as d3 from 'd3'
-import install from '@/plugins/d3-context-menu'
+// import {d3} from 'd3'
+//import install from '../plugins/d3-context-menu'
+import install from '../plugins/d3-context-menu'
 install(d3) // 为d3注册右键菜单插件
 export default {
   name: 'd3graph',
@@ -250,11 +252,11 @@ export default {
     gMainDegree () {
       // 遍历节点
       // this.nodes.forEach(node => {
-      //   
+      //
       // })
       // // 遍历关系
       // this.links.forEach(link => {
-      //   
+      //
       // })
     },
     // 稀疏度
@@ -356,7 +358,7 @@ export default {
     },
     // 隐藏该类型的所有节点（图例）
     hideNodeOfType (event) {
-      if (this.nodes.length === this.data.nodes.length 
+      if (this.nodes.length === this.data.nodes.length
         || this.states.some((state) => state === 'off')) {
         // console.log(event.target.dataset)
         const index = event.target.dataset.index
@@ -429,12 +431,12 @@ export default {
             // 注意: graph=data
             for (var i = 0; i < this.links.length; i++) {
               // 如果links的起点等于name，并且终点等于正在处理的则显示
-              if ((this.links[i]['source'].properties.name.indexOf(name) >= 0) && 
+              if ((this.links[i]['source'].properties.name.indexOf(name) >= 0) &&
                 (this.links[i]['target'].id == d.id)) {
                   return 'active'
               }
               // 如果links的终点等于name，并且起点等于正在处理的则显示
-              if ((this.links[i]['target'].properties.name.indexOf(name) >= 0) && 
+              if ((this.links[i]['target'].properties.name.indexOf(name) >= 0) &&
                 (this.links[i]['source'].id == d.id)) {
                   return 'active'
               }
@@ -451,12 +453,12 @@ export default {
             // links链接的起始节点进行判断,如果其id等于name则显示这类节点
             for (var i = 0; i < this.links.length; i++) {
             // 如果links的起点等于name，并且终点等于正在处理的则显示
-              if ((this.links[i]['source'].properties.name.indexOf(name) >= 0) && 
+              if ((this.links[i]['source'].properties.name.indexOf(name) >= 0) &&
                 (this.links[i]['target'].id == d.id)) {
                   return ''
               }
               //如果links的终点等于name，并且起点等于正在处理的则显示
-              if ((this.links[i]['target'].properties.name.indexOf(name) >= 0) && 
+              if ((this.links[i]['target'].properties.name.indexOf(name) >= 0) &&
                 (this.links[i]['source'].id == d.id)) {
                 return ''
               }
@@ -465,10 +467,10 @@ export default {
           }
         })
         // 搜索links
-        // 显示相的邻边 注意 || 
+        // 显示相的邻边 注意 ||
         this.svgDom.select(".links").selectAll('line').attr('class', d => {
-          if ((d.source.properties.name.indexOf(name) >= 0) || 
-            (d.target.properties.name.indexOf(name) >= 0) 
+          if ((d.source.properties.name.indexOf(name) >= 0) ||
+            (d.target.properties.name.indexOf(name) >= 0)
             ) {
               return ''
             } else {
@@ -477,8 +479,8 @@ export default {
         })
         // 搜索linkTexts
         this.svgDom.select(".linkTexts").selectAll('text').attr('class', d => {
-          if ((d.source.properties.name.indexOf(name) >= 0) || 
-            (d.target.properties.name.indexOf(name) >= 0) 
+          if ((d.source.properties.name.indexOf(name) >= 0) ||
+            (d.target.properties.name.indexOf(name) >= 0)
             ) {
               return ''
             } else {
@@ -512,7 +514,7 @@ export default {
       // svg.selectAll('g').remove()
 
       var svg = _this.svgDom
-        .on('click', () => { 
+        .on('click', () => {
           // console.log(this.isNodeClicked)
           this.isNodeClicked = false
           // 移除所有样式
@@ -542,7 +544,7 @@ export default {
         .append('g')
         .attr('width', '100%')
         .attr('height', '100%')
-        
+
       this.addMarkers()
       // console.log(svg)
       // 动态变化时，不再固定宽高
@@ -568,7 +570,7 @@ export default {
         // .force("center", d3.forceCenter(width / 2, height / 2)
         .force("center", d3.forceCenter(svg.node().parentElement.clientWidth / 2, svg.node().parentElement.clientHeight / 2))
         .force("collision", forceCollide)
-      
+
       // D3映射数据至HTML中
       // g用于绘制所有边,selectALL选中所有的line,并绑定数据data(graph.links),enter().append("line")添加元素
       // 数据驱动文档,设置边的粗细
@@ -583,7 +585,7 @@ export default {
         })
         .join("path")
         .attr("marker-end", "url(#posMarker)")
-      
+
       var linksName = svg.append("g")
         .attr("class", "linkTexts")
         .selectAll("text")
@@ -599,7 +601,7 @@ export default {
       //   .append('textPath')
       //   .attr('xlink:href', d => '#')
       //   .attr('startOffset', '50%')
-        
+
       // 添加所有的点
       // selectAll("circle")选中所有的圆并绑定数据,圆的直径为d.size
       // 再定义圆的填充色,同样数据驱动样式,圆没有描边,圆的名字为d.id
@@ -645,7 +647,7 @@ export default {
           _this.$set(_this.selectNodeData, 'id', id)
           _this.$set(_this.selectNodeData, 'name', name)
           _this.$set(_this.selectNodeData, 'color', color)
-          
+
           //遍历查找id对应的属性
           for (let item of _this.nodes) {
             if (item.id == id) {
@@ -670,14 +672,14 @@ export default {
         // .on('contextmenu', function (d, i) {
         //   // 阻止默认右键菜单的弹出
         //   d3.event.preventDefault()
-          
+
         // })
         // .call(d3.drag()
         //   .on("start", dragstarted)
         //   .on("drag", dragged)
         //   .on("end", dragended)
         // )
-      
+
       // 显示所有的文本
       // 设置大小、填充颜色、名字、text()设置文本
       // 使用 attr("text-anchor", "middle")设置文本居中
@@ -702,7 +704,7 @@ export default {
           // 获取被选中元素的名字
           let name = text.attr("name")
           _this.$set(_this.selectNodeData, 'name', name)
-          
+
           // 根据文本名称获取节点的id
           for (let item of _this.nodes) {
             if (item.properties.name == name) {
@@ -737,13 +739,13 @@ export default {
         //   .on("drag", dragged)
         //   .on("end", dragended)
         // )
-          
+
       // 圆增加title
       node.append("title").text(d => d.properties.name)
-      
+
       // simulation中ticked数据初始化并生成图形
       simulation.on("tick", ticked)
-        
+
       simulation.force("link")
         .links(this.links)
         .distance(d => { // 每一边的长度
@@ -752,18 +754,18 @@ export default {
             case _this.labels[0]: distance += 30;break;
             case _this.labels[1]: distance += 25;break;
             case _this.labels[2]: distance += 22;break;
-            default: distance += 20;break; 
+            default: distance += 20;break;
           }
           switch(d.target.label) {
             case _this.labels[0]: distance += 30;break;
             case _this.labels[1]: distance += 25;break;
             case _this.labels[2]: distance += 22;break;
-            default: distance += 20;break; 
+            default: distance += 20;break;
           }
           return distance * 2
         })
-      
-      /****************************************** 
+
+      /******************************************
        * 内部功能函数
        * 包括：ticked、文本分隔、节点和文本的点击事件
        */
@@ -774,7 +776,7 @@ export default {
           .attr("y1", d => d.source.y)
           .attr("x2", d => d.target.x)
           .attr("y2", d => d.target.y)
-    
+
         linksName
           .attr('transform', d => {
             let x = Math.min(d.source.x, d.target.x) + Math.abs(d.source.x - d.target.x) / 2
@@ -804,7 +806,7 @@ export default {
         node
           .attr("cx", d => d.x)
           .attr("cy", d => d.y)
-    
+
         text.attr('transform', function(d) {
           let size = 15
           switch(d.label){
@@ -817,7 +819,7 @@ export default {
           return 'translate(' + (d.x - size / 2 + 3) + ',' + (d.y + size / 2) + ')'
         })
       }
-      
+
       /**
        * 文本分隔（根据字数在当前选择器中分隔三行，超过10字省略）
        * @method textBreaking
@@ -845,7 +847,7 @@ export default {
           } else if (len > 10){
             botText = text.substring(7, 9) + '...'
           }
-  
+
           d3text.text('')
           d3text.append('tspan')
             .attr('x', 0)
@@ -889,7 +891,7 @@ export default {
         // 直接通过this.selectNodeData拿到节点信息
         event.cancelBubble = true
         event.stopPropagation() // 阻止事件冒泡
-        
+
         const name = _this.selectNodeData.name
         _this.isNodeClicked = true
         _this.changeGraphStyle(name)
@@ -945,7 +947,7 @@ export default {
             return this.isNodeClicked ? 'inactive' : ''
           }
         })
-      // 处理相邻的边line是否隐藏 注意 || 
+      // 处理相邻的边line是否隐藏 注意 ||
       this.svgDom.select(".links").selectAll('line')
         .attr('class', d => {
           if (d.source.properties.name == name || d.target.properties.name == name) {
@@ -961,7 +963,7 @@ export default {
             return 'url(#posMarker)'
           }
         })
-      // 处理相邻的边上文字是否隐藏 注意 || 
+      // 处理相邻的边上文字是否隐藏 注意 ||
       this.svgDom.select(".linkTexts").selectAll('text')
         .attr('class', d => {
           if (d.source.properties.name == name || d.target.properties.name == name) {
@@ -989,19 +991,19 @@ export default {
         event.subject.fx = event.subject.x;
         event.subject.fy = event.subject.y;
       }
-      
+
       function dragged(event) {
         event.subject.fx = event.x;
         event.subject.fy = event.y;
       }
-      
+
       function dragended(event) {
         if (!event.active) simulation.alphaTarget(0);
         // 注释以下代码，使拖动结束后固定节点
         // event.subject.fx = null;
         // event.subject.fy = null;
       }
-      
+
       return d3.drag()
         .subject(dragsubject)
         .on("start", dragstarted)
@@ -1063,7 +1065,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/plugins/d3-context-menu';
+// @import 引入css文件
+@import '../plugins/d3-context-menu';
+//import 'vue-laozi/src/components/plugins/d3-context-menu'
 $opacity: 0.15;  /* 显示的不透明度 */
 $activeColor: #1E90FF;  /* 激活的颜色 */
 svg {

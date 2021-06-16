@@ -25,12 +25,13 @@ public class BookController {
 		JSONObject in = JSONObject.parseObject(param);
 		String category=in.getString("category");
 		int page=in.getInteger("page");
-		List<String> names= bookService.getBookNamesByCategory(category,page);
+		List<Book> names= bookService.getBookNamesByCategory(category,page);
 		JSONArray out = new JSONArray();
 		for (int i=0;i<names.size();i++){
-			String name=names.get(i);
+			Book book=names.get(i);
 			JSONObject re=new JSONObject();
-			re.put("book_name",name);
+			re.put("book_name",book.getBook_name());
+			re.put("introduction", book.getIntroduction());
 			re.put("category", category);
 			out.add(re);
 		}
