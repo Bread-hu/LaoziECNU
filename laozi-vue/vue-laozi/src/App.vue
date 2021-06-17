@@ -9,7 +9,10 @@ import zuozhe from "./components/zuozhe";
 import chengyu from "./components/chengyu";
 import wenxian  from "./components/wenxian";
 // import zhishitupu from "./components/zhishitupu";
-import zhishitupu from  "./components/2dView"
+import zhishitupu from  "./components/2dView";
+import book from "./components/book";
+import chengyudt from '@/components/chengyu_detailed'
+import bookdt from '@/components/book_detailed'
 
 export default {
   name: "App",
@@ -19,7 +22,10 @@ export default {
     zuozhe,
     chengyu,
     wenxian,
-    zhishitupu
+    zhishitupu,
+    book,
+    chengyudt,
+    bookdt
   },
   data() {
     return {

@@ -11,15 +11,24 @@
           <p class="text_mode_1" style="font-size: 20px;float: top ">成语字典全录入</p>
         </div>
         <div class="div_block" >
-
+          <p class="text_mode">作者</p>
+          <p class="text_mode_1" style="font-size: 20px;float: top ">古籍诗词作者全录入</p>
         </div>
         <div class="div_block" >
+          <p class="text_mode">文献</p>
+          <p class="text_mode_1" style="font-size: 20px;float: top ">古籍核心文献</p>
         </div>
         <div class="div_block" >
+          <p class="text_mode">时空间GIS</p>
+          <p class="text_mode_1" style="font-size: 20px;float: top ">作者古籍时空间变化</p>
         </div>
         <div class="div_block" >
+          <p class="text_mode">知识图谱</p>
+          <p class="text_mode_1" style="font-size: 20px;float: top ">作者古籍知识图谱</p>
         </div>
         <div class="div_block" >
+          <p class="text_mode">道德经</p>
+          <p class="text_mode_1" style="font-size: 20px;float: top ">道经德经多种翻译</p>
         </div>
 
       </el-main>

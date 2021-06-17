@@ -8,6 +8,9 @@ import chengyu from '@/components/chengyu'
 import wenxian from '@/components/wenxian'
 // import zhishitupu from '@/components/zhishitupu'
 import zhishitupu from '@/components/2DView'
+import book from  '@/components/book'
+import chengyudt from '@/components/chengyu_detailed'
+import bookdt from '@/components/book_detailed'
 
 Vue.use(Router)
 
@@ -48,6 +51,21 @@ export default new Router({
       path: '/zhishitupu',
       name: 'zhishitupu',
       component: zhishitupu
+    },
+    {
+      path: '/book',
+      name: 'book',
+      component: book
+    },
+    {
+      path: '/chengyudt',
+      name: 'chengyudt',
+      component: chengyudt
+    },
+    {
+      path: '/bookdt',
+      name: 'bookdt',
+      component: bookdt
     }
   ]
 })

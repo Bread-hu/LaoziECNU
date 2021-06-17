@@ -1,0 +1,3798 @@
+[
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "新唐书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "新唐书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book172",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "序"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book172",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "序"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book172",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book184",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "与高司谏书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book184",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "与高司谏书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book184",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book385",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "画眉鸟"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book385",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "画眉鸟"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book385",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book437",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "浣溪沙"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book437",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "浣溪沙"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book437",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book593",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "新五代史"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book593",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "新五代史"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book593",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book638",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "醉翁亭记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book638",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "醉翁亭记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book638",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1021",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "相州昼锦堂记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1021",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "相州昼锦堂记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1021",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1043",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "记旧本韩文后"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1043",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "记旧本韩文后"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1043",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1174",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "张子野墓志铭"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1174",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "张子野墓志铭"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1174",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1360",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "晋祠"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1360",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "晋祠"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1360",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1747",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "与梅圣俞书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1747",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "与梅圣俞书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1747",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1760",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "相州尽锦堂记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1760",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "相州尽锦堂记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1760",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1991",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "读张李二生文赠石先生"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1991",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "读张李二生文赠石先生"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1991",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book1993",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "答吴充秀才书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1993",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "答吴充秀才书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book1993",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2063",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "乞补馆职札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2063",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "乞补馆职札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2063",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2249",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "回丁判官书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2249",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "回丁判官书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2249",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2302",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "渔家傲"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2302",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "渔家傲"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2302",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2338",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "泷冈阡表"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2338",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "泷冈阡表"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2338",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2365",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "欧阳文忠公集"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2365",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "欧阳文忠公集"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2365",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2604",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "试笔"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2604",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "试笔"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2604",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2770",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "文正范公神道碑铭"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2770",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "文正范公神道碑铭"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2770",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book2950",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "乞奖用孙沔札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book2950",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "乞奖用孙沔札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book2950",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3126",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "采桑子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3126",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "采桑子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3126",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3141",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "赠沈遵"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3141",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "赠沈遵"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3141",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3539",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "与韩忠献王"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3539",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "与韩忠献王"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3539",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3760",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "解仙佩"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3760",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "解仙佩"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3760",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3807",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "〈释秘演集〉序"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3807",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "〈释秘演集〉序"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3807",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3838",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "原弊"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3838",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "原弊"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3838",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3962",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "代人上王枢密求先集序书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3962",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "代人上王枢密求先集序书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3962",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book3998",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "憎苍蝇赋"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book3998",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "憎苍蝇赋"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book3998",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4016",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "归田录"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4016",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "归田录"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4016",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4075",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "生查子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4075",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "生查子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4075",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4130",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "本论"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4130",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "本论"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4130",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4131",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "祭石蔓卿文"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4131",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "祭石蔓卿文"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4131",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4433",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "代鸠妇言"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4433",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "代鸠妇言"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4433",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4494",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "与员外书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4494",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "与员外书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4494",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book4718",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "除许怀德制"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book4718",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "除许怀德制"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book4718",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5157",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "六一笔记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5157",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "六一笔记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5157",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5246",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "梁州令"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5246",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "梁州令"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5246",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5270",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "江宁府句容县令赠尚书兵部员外郎王公墓志铭"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5270",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "江宁府句容县令赠尚书兵部员外郎王公墓志铭"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5270",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5333",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "谢复龙图阁直学士表"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5333",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "谢复龙图阁直学士表"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5333",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5414",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "鹎鵊词"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5414",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "鹎鵊词"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5414",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5583",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "再和公仪赠白鹇"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5583",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "再和公仪赠白鹇"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5583",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5666",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "上范司谏书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5666",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "上范司谏书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5666",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5750",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "吉州学记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5750",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "吉州学记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5750",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book5916",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "纵囚论"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book5916",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "纵囚论"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book5916",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book6003",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "论更改贡举事件札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book6003",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "论更改贡举事件札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book6003",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book6265",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "梅圣俞寄银杏"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book6265",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "梅圣俞寄银杏"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book6265",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book6287",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "右班殿直赠右羽林军将军唐君墓志铭"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book6287",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "右班殿直赠右羽林军将军唐君墓志铭"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book6287",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book6493",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "梅圣俞诗集序"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book6493",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "梅圣俞诗集序"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book6493",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book6692",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "再论置兵御贼札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book6692",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "再论置兵御贼札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book6692",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7493",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "朋党论"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7493",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "朋党论"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7493",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7495",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "论乞主张范仲淹富弼等行事札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7495",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "论乞主张范仲淹富弼等行事札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7495",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7731",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "六一居士传"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7731",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "六一居士传"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7731",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7738",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "绿竹堂独饮"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7738",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "绿竹堂独饮"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7738",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7844",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "六一诗话"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7844",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "六一诗话"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7844",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book7971",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "秋声赋"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book7971",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "秋声赋"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book7971",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8101",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "祭杜祁公文"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8101",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "祭杜祁公文"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8101",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8103",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "祭苏子美文"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8103",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "祭苏子美文"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8103",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8182",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "苏才翁挽诗二首"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8182",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "苏才翁挽诗二首"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8182",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8500",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "集贤院学士刘公墓志铭"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8500",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "集贤院学士刘公墓志铭"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8500",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8563",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "笔说"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8563",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "笔说"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8563",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8625",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "〈归田录〉序"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8625",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "〈归田录〉序"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8625",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8690",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "夫子罕言利命仁论"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8690",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "夫子罕言利命仁论"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8690",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8712",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "尊皇太后册文"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8712",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "尊皇太后册文"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8712",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book8752",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "樊侯庙灾记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book8752",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "樊侯庙灾记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book8752",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9082",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "品令"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9082",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "品令"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9082",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9359",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "论议濮安懿王典礼札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9359",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "论议濮安懿王典礼札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9359",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9360",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "濮议"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9360",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "濮议"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9360",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9372",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "论台谏官唐介等宜早牵复札子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9372",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "论台谏官唐介等宜早牵复札子"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9372",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9588",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "与十四弟书"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9588",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "与十四弟书"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9588",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "start": {
+                "identity": "auth132",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "欧阳修"
+                }
+            },
+            "end": {
+                "identity": "book9594",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "醉瓮亭记"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth132",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "欧阳修"
+                        }
+                    },
+                    "end": {
+                        "identity": "book9594",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "醉瓮亭记"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth132",
+                        "end": "book9594",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

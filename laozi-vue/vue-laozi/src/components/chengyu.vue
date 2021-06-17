@@ -110,64 +110,67 @@
 <!--          </el-dialog>-->
         <div class="divbg">
         <div class="mcon" style="margin-top: 10px;text-align:center;margin:0 auto">
-          <h3>成语列表</h3>
+          <h1>成语列表</h1>
           <ul class="btn w4">
-          <li>
-            <a href="www.baidu.com" target="_blank">不堪入目</a>
-          </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
+            <li v-for="item in chengyu_list" :key="item.id" :index="item.id">
+              <a :href="getHref(item.id)">{{item.idiom}}</a>
             </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">
+<!--          <li>-->
+<!--            <a :href="getHref()"  target="_blank">不堪入目</a>-->
+<!--          </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">-->
 
-              </a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
-            <li>
-              <a href="www.baidu.com" target="_blank">不堪入目</a>
-            </li>
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
+<!--            </li>-->
           </ul>
         </div>
         </div>
@@ -181,6 +184,7 @@
     name: 'chengyu',
     data(){
       return{
+        temp: "公羊传",
         chengyu_json:{},
         button_list: [
           { name: "首页", path: "/" },
@@ -223,57 +227,12 @@
       }
     },
     created() {
-      // var that = this;
-      // // console.log(that)
-      // // console.log(that.pinyin_list.length)
-      // // for(var i=0;i<that.pinyin_list.length;i++)
-      // // {
-      // //   for(var j=0;j<that.pinyin_list[i].head_list.length;j++){
-      // //     that.chengyu_list[that.pinyin_list[i].head_list[j]] = [];
-      // //   }
-      // // }
-      // // console.log(that.chengyu_list)
-      //
-      // for(var i=0; i<that.pinyin_list.length;i++)
-      // {
-      //   //console.log(that.pinyin_list[i].head_list)
-      //   for(var j=0;j<that.pinyin_list[i].head_list.length;j++)
-      //   {
-      //     that.chengyu_list[that.pinyin_list[i].head_list[j]] = []
-      //     //console.log(temp)
-      //     this.axios({
-      //       url:'/getIdioms',
-      //       method: "post",
-      //       data:{
-      //         firstPhonetic: that.pinyin_list[i].head_list[j]
-      //       }
-      //     }).then(
-      //       function (response)
-      //       {
-      //         // console.log(response.data)
-      //         // console.log(response)
-      //         // console.log(that.pinyin_list[i].head_list[j])
-      //         //console.log(response.data)
-      //         // console.log(i)
-      //         // console.log(that.pinyin_list)
-      //         // console.log(response.data[0].name)
-      //         // console.log(that.chengyu_list)
-      //         if(response.data.length != 0){
-      //           that.chengyu_list[response.data[0].name] = response.data
-      //           //console.log(that.chengyu_list)
-      //         }
-      //
-      //       },
-      //       function (err)
-      //       {
-      //         console.log(err)
-      //       }
-      //     )
-      //   }
-      // }
-      // console.log(that.chengyu_list)
+      this.getChengyu('a')
     },
     methods: {
+      getHref(id){
+        return "/chengyudt?id=" + id
+      },
       getChengyu(head){
         var that = this;
         console.log(111)
@@ -288,6 +247,7 @@
           function (response)
           {
             that.chengyu_list = response.data
+            console.log(that.chengyu_list)
           },
           function (err)
           {
@@ -338,7 +298,7 @@ p{
 .mcon{
   background-color: #ebeee9;
   padding: 50px;
-  width: 40%;
+  width: 50%;
   height: 90%;
 }
 
@@ -365,7 +325,6 @@ a {
   cursor: pointer;
   outline: none;
   blur: expression(this.onFocus=this.blur());
-
 }
 
 .mtitle a, .mcon a, .otitle a {
