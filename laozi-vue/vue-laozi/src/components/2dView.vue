@@ -39,9 +39,10 @@ export default {
         nodes: [],
         links: []
       },
-      names: ['企业', '贸易类型', '地区', '国家'],
-      labels: ['Enterprise', 'Type', 'Region', 'Country'],
-      linkTypes: ['', 'type', 'locate', 'export']
+      // names: ['企业', '贸易类型', '地区', '国家'],
+      names: ['作者', '文献'],
+      labels: ['Author', 'Book'],
+      linkTypes: ['', 'write']
     }
   },
   methods: {

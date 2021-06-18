@@ -11,6 +11,7 @@ import zhishitupu from '@/components/2DView'
 import book from  '@/components/book'
 import chengyudt from '@/components/chengyu_detailed'
 import bookdt from '@/components/book_detailed'
+import zuozhedt from "../components/zuozhedt"
 
 Vue.use(Router)
 
@@ -66,6 +67,11 @@ export default new Router({
       path: '/bookdt',
       name: 'bookdt',
       component: bookdt
+    },
+    {
+      path: '/zuozhedt',
+      name: 'zuozhedt',
+      component: zuozhedt
     }
   ]
 })

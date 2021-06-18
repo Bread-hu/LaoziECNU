@@ -4,7 +4,7 @@
       <el-header>
         <top-bar></top-bar>
       </el-header>
-      <el-main style="margin-top:20px;width: 100%;height: 1000px;text-align: center">
+      <el-main style="margin-top:10vh;width: 100%;height: 90vh;text-align: center">
 
         <div class="div_block" >
           <p class="text_mode">成语</p>
@@ -32,6 +32,10 @@
         </div>
 
       </el-main>
+
+<!--      <el-footer>-->
+<!--        <foot-bar></foot-bar>-->
+<!--      </el-footer>-->
 <!--        <div style="width: 100%">-->
 <!--      <div>-->
 <!--        <div class="div_block">-->
@@ -57,6 +61,7 @@
 <!--      </el-footer>-->
     </el-container>
   </div>
+
 </template>
 
 <script>

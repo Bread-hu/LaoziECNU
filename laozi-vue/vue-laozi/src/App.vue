@@ -13,6 +13,7 @@ import zhishitupu from  "./components/2dView";
 import book from "./components/book";
 import chengyudt from '@/components/chengyu_detailed'
 import bookdt from '@/components/book_detailed'
+import zuozhedt from "./components/zuozhedt";
 
 export default {
   name: "App",
@@ -25,7 +26,8 @@ export default {
     zhishitupu,
     book,
     chengyudt,
-    bookdt
+    bookdt,
+    zuozhedt
   },
   data() {
     return {

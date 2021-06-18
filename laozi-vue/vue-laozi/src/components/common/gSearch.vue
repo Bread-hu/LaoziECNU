@@ -44,7 +44,7 @@ export default {
       input: '',
       mode: '1',
       // 后台请求到的json数据
-      data: require('../data/records.json'),
+      data: require('../data/result_1.json'),
       results: []
     }
   },
