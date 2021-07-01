@@ -4,10 +4,11 @@
             "start": {
                 "identity": "auth132",
                 "labels": [
-                    "Book"
+                    "Author"
                 ],
                 "properties": {
-                    "name": "欧阳修"
+                    "name": "欧阳修",
+                    "address": "江苏"
                 }
             },
             "end": {
@@ -24,10 +25,12 @@
                     "start": {
                         "identity": "auth132",
                         "labels": [
-                            "Book"
+                            "Author"
                         ],
                         "properties": {
-                            "name": "欧阳修"
+                            "name": "欧阳修",
+                            "address": "江苏",
+                            "birth": "公元前"
                         }
                     },
                     "end": {

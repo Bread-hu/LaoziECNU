@@ -226,8 +226,8 @@ export default {
       // 节点属性对应的标签名称
       nodeObjMap: {
         'address': '注册地址',
-        'captial': '注册资本',
-        'credit_code': '信用代码',
+        'birth': '出生年代',
+        'explan': '翻译',
         'name': '节点名称',
         'setup_time': '注册日期'
       }

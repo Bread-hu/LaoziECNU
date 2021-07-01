@@ -40,9 +40,9 @@ export default {
         links: []
       },
       // names: ['企业', '贸易类型', '地区', '国家'],
-      names: ['作者', '文献'],
-      labels: ['Author', 'Book'],
-      linkTypes: ['', 'write']
+      names: ['作者', '文献','成语'],
+      labels: ['Author', 'Book', 'Idiom'],
+      linkTypes: ['', 'write', 'from']
     }
   },
   methods: {

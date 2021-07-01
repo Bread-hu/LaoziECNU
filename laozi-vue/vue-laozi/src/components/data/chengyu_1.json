@@ -1,0 +1,162 @@
+[
+    {
+        "p": {
+            "start": {
+                "identity": "auth1",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "老子"
+                }
+            },
+            "end": {
+                "identity": "book1",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "老子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth1",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "老子",
+                            "birth":"春秋末期"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth1",
+                        "end": "book1",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+      "p": {
+        "segments": [
+          {
+            "start": {
+              "identity": "Idiom1",
+              "labels": [
+                "Idiom"
+              ],
+              "properties": {
+                "name": "根深蒂固",
+                "explan": "比喻基础深厚，不容易动摇"
+              }
+            },
+            "end": {
+              "identity": "book1",
+              "labels": [
+                "Book"
+              ],
+              "properties": {
+                "name": "《老子》"
+              }
+            },
+            "relationship": {
+              "start": "Idiom1",
+              "end": "book1",
+              "type": "from",
+              "properties": {
+                "name": "出自"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "p": {
+        "segments": [
+          {
+            "start": {
+              "identity": "Idiom2",
+              "labels": [
+                "Idiom"
+              ],
+              "properties": {
+                "name": "祸福相依",
+                "explan": "指祸与福相因而生"
+              }
+            },
+            "end": {
+              "identity": "book1",
+              "labels": [
+                "Book"
+              ],
+              "properties": {
+                "name": "《老子》"
+              }
+            },
+            "relationship": {
+              "start": "Idiom2",
+              "end": "book1",
+              "type": "from",
+              "properties": {
+                "name": "出自"
+              }
+            }
+          }
+        ]
+      }
+    },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom3",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "鸡犬相闻",
+              "explan": "指人烟稠密"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom3",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
+
