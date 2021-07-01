@@ -1,10 +1,11 @@
 <template>
-  <div id="app">
+
     <el-container>
       <el-header>
         <top-bar></top-bar>
       </el-header>
-      <el-main style="margin-top:10vh;width: 100%;height: 90vh;text-align: center">
+      <el-container >
+      <el-main style="margin-top:5vh;width: 100%;height:70vh;text-align: center;">
 
         <div class="div_block" >
           <p class="text_mode">成语</p>
@@ -33,34 +34,12 @@
 
       </el-main>
 
-<!--      <el-footer>-->
-<!--        <foot-bar></foot-bar>-->
-<!--      </el-footer>-->
-<!--        <div style="width: 100%">-->
-<!--      <div>-->
-<!--        <div class="div_block">-->
-<!--          <span>嘻嘻哈哈</span>-->
-<!--        </div>-->
-<!--        <div class="div_block">-->
-<!--          <span>嘻嘻嘻</span>-->
-<!--        </div>-->
-<!--        <div class="div_block">-->
-
-<!--        </div>-->
-<!--        <div class="div_block">-->
-
-<!--        </div>-->
-<!--        <div class="div_block">-->
-<!--        </div>-->
-<!--      </div>-->
-<!--        </div>-->
-<!--        </div>-->
-
-<!--      <el-footer>-->
-<!--        <foot-bar></foot-bar>-->
-<!--      </el-footer>-->
+      </el-container>
+      <el-footer>
+        <foot-bar></foot-bar>
+      </el-footer>
     </el-container>
-  </div>
+
 
 </template>
 
@@ -96,7 +75,7 @@ export default {
 }
 .div_block{
   width:10%;
-  height:60%;
+  height:80%;
   display: inline-block;
   background-color: #d3b17d;
   opacity:0.3;
@@ -134,8 +113,8 @@ export default {
   -webkit-writing-mode: vertical-rl;
   float: right;
   display: none;
-
 }
+
 /*.dt{*/
 /*  writing-mode: vertical-lr;*/
 /*  writing-mode: tb-lr;*/

@@ -17,7 +17,7 @@ import zuozhedt from "./components/zuozhedt";
 
 export default {
   name: "App",
-  comments: {
+  components: {
     daodejing,
     mainPage,
     zuozhe,
