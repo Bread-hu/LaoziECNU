@@ -16,6 +16,7 @@
   "dependencies": {
     "3d-force-graph": "^1.70.2",
     "axios": "^0.21.1",
+    "echarts": "^4.9.0",
     "element-ui": "^2.15.1",
     "three-spritetext": "^1.6.2",
     "vue": "^2.5.2",

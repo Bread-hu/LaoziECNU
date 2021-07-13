@@ -12,7 +12,7 @@ import book from  '@/components/book'
 import chengyudt from '@/components/chengyu_detailed'
 import bookdt from '@/components/book_detailed'
 import zuozhedt from "../components/zuozhedt"
-
+import shikongjian from "../components/shikongjian";
 Vue.use(Router)
 
 export default new Router({
@@ -72,6 +72,11 @@ export default new Router({
       path: '/zuozhedt',
       name: 'zuozhedt',
       component: zuozhedt
+    },
+    {
+      path: '/shikongjian',
+      name: 'shikongjian',
+      component: shikongjian
     }
   ]
 })

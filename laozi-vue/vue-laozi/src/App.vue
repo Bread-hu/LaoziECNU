@@ -14,6 +14,7 @@ import book from "./components/book";
 import chengyudt from '@/components/chengyu_detailed'
 import bookdt from '@/components/book_detailed'
 import zuozhedt from "./components/zuozhedt";
+import shikongjian from "./components/shikongjian";
 
 export default {
   name: "App",
@@ -27,7 +28,8 @@ export default {
     book,
     chengyudt,
     bookdt,
-    zuozhedt
+    zuozhedt,
+    shikongjian
   },
   data() {
     return {
