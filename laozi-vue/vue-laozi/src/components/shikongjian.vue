@@ -4,7 +4,8 @@
       <top-bar></top-bar>
     </el-header>
     <el-container>
-      <div id="china_map" :style="{width:width, height: '400px' }"></div>
+      <div id="china_map" :style="{width:width, height: '70vh' }"></div>
+<!--        <div id="china_map" style="width: 70vw;height:50vh"></div>-->
     </el-container>
   </el-container>
 </template>
@@ -58,7 +59,7 @@ export default {
             let htmlStr = `
           <div style='font-size:18px;'> ${params.name}</div>
           <p style='text-align:left;margin-top:-4px;'>
-              项目数量：${localValue}<br/>
+              成语：${localValue}<br/>
               占比：${perf}<br/>
           </p>
         `;
@@ -67,23 +68,23 @@ export default {
           backgroundColor: "#ff7f50", //提示标签背景颜色
           textStyle: { color: "#fff" }, //提示标签字体颜色
         },
-        visualMap: {
-          show: true,
-          bottom: 60,
-          right: 200,
-          text: ["高", "低"],
-          //  min:0,
-          //   precision:0,
-          itemHeight: 200,
-          color: [
-            "#5475f5",
-            "#9feaa5",
-            "#85daef",
-            "#74e2ca",
-            "#e6ac53",
-            "#9fb5ea",
-          ],
-        },
+        // visualMap: {
+        //   show: true,
+        //   bottom: 60,
+        //   right: 200,
+        //   text: ["高", "低"],
+        //   //  min:0,
+        //   //   precision:0,
+        //   itemHeight: 200,
+        //   color: [
+        //     "#5475f5",
+        //     "#9feaa5",
+        //     "#85daef",
+        //     "#74e2ca",
+        //     "#e6ac53",
+        //     "#9fb5ea",
+        //   ],
+        // },
         // geo配置详解： https://echarts.baidu.com/option.html#geo
         geo: {
           // 地理坐标系组件用于地图的绘制
@@ -116,33 +117,47 @@ export default {
         series: [
           {
             name: "地图", // 浮动框的标题（上面的formatter自定义了提示框数据，所以这里可不写）
-            type: "map",
+            type: "scatter",
             geoIndex: 0,
             label: {
               show: true,
             },
+            coordinateSystem: 'geo',
             // 这是需要配置地图上的某个地区的数据，根据后台的返回的数据进行拼接（下面是我定义的假数据）
             data: [
               {
-                name: "北京",
-                value: 599, //  项目数量
-                perf: "60%", // 项目占比
-              },
-              {
-                name: "上海",
-                value: 142,
-                perf: "40%",
-              },
-              {
-                name: "黑龙江",
-                value: 44,
-                perf: "1%",
-              },
-              {
-                name: "新疆",
-                value: 999,
-                perf: "70%",
-              },
+                name : '北京',
+                value: [
+                  116.46,
+                  39.92,
+                  340
+                ]
+              }
+              // {
+              //   name: "北京",
+              //   value: 599, //  项目数量
+              //   perf: "60%", // 项目占比
+              // },
+              // {
+              //   name: "上海",
+              //   value: 142,
+              //   perf: "40%",
+              // },
+              // {
+              //   name: "黑龙江",
+              //   value: 44,
+              //   perf: "1%",
+              // },
+              // {
+              //   name: "新疆",
+              //   value: 999,
+              //   perf: "70%",
+              // },
+              // {
+              //   name:"徐州市",
+              //   value: 200,
+              //   perf:"80%",
+              // }
             ],
           },
         ],
