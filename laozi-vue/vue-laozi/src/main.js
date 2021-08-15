@@ -12,7 +12,8 @@ import topbar from "./components/common/topbar";
 import footbar from "./components/common/footbar"
 import echarts from 'echarts'
 
-axios.defaults.baseURL=process.env.API_ROOT;
+// axios.defaults.baseURL=process.env.API_ROOT;
+axios.defaults.baseURL="http://localhost:8080"
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)

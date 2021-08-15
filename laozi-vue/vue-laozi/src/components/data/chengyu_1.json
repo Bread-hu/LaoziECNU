@@ -157,6 +157,321 @@
         }
       ]
     }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom4",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "知足不辱",
+              "explan": "知道满足就不会受到羞辱。表示不要有贪心。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom4",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom5",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "指树为姓",
+              "explan": "道教传说，老子生于李树下，因以李为姓。见晋葛洪《神仙传·老子》。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom5",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom6",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "无为自化",
+              "explan": "谓无为而治。语本《老子》：“我无为而民自化。”"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom6",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom7",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "思归其雌",
+              "explan": "谓退藏潜服。语本《老子》：“知其雄，守其雌，为天下溪。”"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom7",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom8",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "戎马生郊",
+              "explan": "《老子》：“天下无道，戎马生于郊。”陈鼓应注：“生于郊，指牝马生驹犊于战地的郊野。”意谓国家政治不上轨道，连怀胎的母马也用来作战。后以“戎马生郊”指战乱不断。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom8",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom9",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "若烹小鲜",
+              "explan": "意为治理大国要像煮小鱼一样。煮小鱼，不能多加搅动，多搅则易烂，比喻治大国应当无为。后常用来比喻轻而易举。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom9",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom10",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "龙化虎变",
+              "explan": "《易·革》：“大人虎变，其文炳也。”《史记·老子韩非列传》“（孔子）谓弟子曰：‘鸟，吾知其能飞；鱼，吾知其能游；兽，吾知其能走。走者可以为罔，游者可以为纶，飞者可以为矰。至于龙，吾不能知其乘风云而上天。’”后因以“龙化虎变”比喻变化莫测。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom10",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom11",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "和光同尘",
+              "explan": "和、同：混合。和光：混合各种光彩；同尘：与尘俗相同。指不露锋芒，与世无争的消极处世态度。也比喻同流合污。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom11",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom12",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "绝圣弃智",
+              "explan": "圣、智：智慧，聪明。弃绝聪明才智，返归天真纯朴。这是古代老、庄的无为而治的思想。"
+            }
+          },
+          "end": {
+            "identity": "book1",
+            "labels": [
+              "Book"
+            ],
+            "properties": {
+              "name": "《老子》"
+            }
+          },
+          "relationship": {
+            "start": "Idiom12",
+            "end": "book1",
+            "type": "from",
+            "properties": {
+              "name": "出自"
+            }
+          }
+        }
+      ]
+    }
   }
 ]
 

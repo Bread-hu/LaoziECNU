@@ -58,9 +58,9 @@ export default {
     query () {
       // console.log(typeof this.mode)
       if (this.data.length <= 20) {
-        this.data = require('../data/top5.json')
+        this.data = require('../data/temp.json')
       } else {
-        this.data = require('../data/records.json')
+        this.data = require('../data/temp.json')
       }
       this.$emit('getData', this.data)
     },
