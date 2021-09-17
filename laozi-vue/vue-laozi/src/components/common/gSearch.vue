@@ -44,7 +44,7 @@ export default {
       input: '',
       mode: '1',
       // 后台请求到的json数据
-      data: require('../data/chengyu_1.json'),
+      data: require('../data/chengyu_11.json'),
       results: []
     }
   },
@@ -58,9 +58,9 @@ export default {
     query () {
       // console.log(typeof this.mode)
       if (this.data.length <= 20) {
-        this.data = require('../data/temp.json')
+        this.data = require('../data/Idiom.json')
       } else {
-        this.data = require('../data/temp.json')
+        this.data = require('../data/Idiom.json')
       }
       this.$emit('getData', this.data)
     },

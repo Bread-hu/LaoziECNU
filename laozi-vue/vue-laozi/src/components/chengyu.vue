@@ -115,62 +115,6 @@
             <li v-for="item in chengyu_list" :key="item.id" :index="item.id">
               <a :href="getHref(item.id)">{{item.idiom}}</a>
             </li>
-<!--          <li>-->
-<!--            <a :href="getHref()"  target="_blank">不堪入目</a>-->
-<!--          </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">-->
-
-<!--              </a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <a href="www.baidu.com" target="_blank">不堪入目</a>-->
-<!--            </li>-->
           </ul>
         </div>
         </div>

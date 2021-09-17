@@ -1,6 +1,6 @@
 ﻿.banner{
     width:100%;
-    background:url(../images/banner-search.png) no-repeat;
+    background:url(../img/banner-search.png) no-repeat;
     height:360px;
 }
 .banner .search{
@@ -24,7 +24,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     border:none;
-    background: url(../images/icon-arrow-index.png) no-repeat scroll 98% center #fff;
+    background: url(../img/icon-arrow-index.png) no-repeat scroll 98% center #fff;
 }
 .banner .search input{
     width:600px;
@@ -36,7 +36,7 @@
     display:inline-block;
     width:32px;
     height:32px;
-    background:url(../images/search.png) no-repeat;
+    background:url(../img/search.png) no-repeat;
     vertical-align: middle;
 }
 /*检索结果页*/
@@ -63,7 +63,7 @@
     height:18px;
     vertical-align:middle;
     margin-right:10px;
-    background:url(../images/icon-source.png) no-repeat;
+    background:url(../img/icon-source.png) no-repeat;
 }
 .result-type .checkbox{
     border-left:1px solid #4a2b19;
@@ -130,11 +130,11 @@
     position: absolute;
 }
 .result-sort span a.top{
-    background-image:url(../images/sort-top.png);
+    background-image:url(../img/sort-top.png);
     top:-12px;
 }
 .result-sort span a.bottom{
-   background-image:url(../images/sort-bottom.png);
+   background-image:url(../img/sort-bottom.png);
    top:-4px;
 }
 .result-tab{
@@ -240,7 +240,7 @@
     height:18px;
     vertical-align:middle;
     margin-right:10px;
-    background:url(../images/icon-advanced.png) no-repeat;
+    background:url(../img/icon-advanced.png) no-repeat;
 }
 .search-advanced{
     background-color:#f2f2f2;
@@ -279,7 +279,7 @@
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: url(../images/icon-select.png) no-repeat scroll 94% center #fff;
+    background: url(../img/icon-select.png) no-repeat scroll 94% center #fff;
 }
 .advanced-item .item-input{
     width:400px;
@@ -318,7 +318,7 @@
     height:18px;
     vertical-align:middle;
     margin-right:10px;
-    background:url(../images/icon-cg.png) no-repeat;
+    background:url(../img/icon-cg.png) no-repeat;
 }
 .cg-upload{
     border-bottom: 2px solid #4a2b19;
@@ -341,7 +341,7 @@
     height:18px;
     vertical-align:middle;
     margin-right:10px;
-    background:url(../images/icon-zj.png) no-repeat;
+    background:url(../img/icon-zj.png) no-repeat;
 }
 .result-img div{
     float:left;
@@ -384,7 +384,7 @@
     display:inline-block;
     width:14px;
     height:14px; 
-    background:url(../images/icon-common-search.png) no-repeat center center;
+    background:url(../img/icon-common-search.png) no-repeat center center;
 }
 
 /*================成果创建页=========*/
@@ -550,7 +550,7 @@
 		font-size: 18px;
 		width: 100%;
 		color: #4a2b19;
-		background: url(../images/icon-cg-text.png) no-repeat 84px center;
+		background: url(../img/icon-cg-text.png) no-repeat 84px center;
 	}
 
 	.cg-box .cg-upload-list {
@@ -584,7 +584,7 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	border: 1px solid #333;
-	background: url(../images/icon-select.png) no-repeat scroll 98% center #f2f2f2;
+	background: url(../img/icon-select.png) no-repeat scroll 98% center #f2f2f2;
 }
 
 .cg-upload-list .cg-input {
@@ -632,7 +632,7 @@
 	}
 
 	.cg-item .cg-input #complete-time {
-		background: url(../images/icon-date.png) no-repeat 150px center;
+		background: url(../img/icon-date.png) no-repeat 150px center;
 	}
 
 .cg-upload-list .cg-file {
@@ -762,7 +762,7 @@
 	height: 16px;
 	vertical-align: middle;
 	margin-right: 10px;
-	background: url(../images/icon-find.png) no-repeat;
+	background: url(../img/icon-find.png) no-repeat;
 }
 
 .result-type .find-box {
@@ -813,7 +813,7 @@
 	}
 
 #begin-time, #end-time {
-	background: url(../images/icon-search-date.png) no-repeat 98% center #fff;
+	background: url(../img/icon-search-date.png) no-repeat 98% center #fff;
 }
 
 .apply-zj-box {
@@ -948,7 +948,7 @@
 		vertical-align: middle;
 		margin-right: 40px;
 		margin-left: 20px;
-		background: url(../images/icon-user.png) no-repeat;
+		background: url(../img/icon-user.png) no-repeat;
 	}
 
 .mes-search {
@@ -973,7 +973,7 @@
 		width: 26px;
 		height: 26px;
 		vertical-align: middle;
-		background: url(../images/search.png) no-repeat center center;
+		background: url(../img/search.png) no-repeat center center;
 	}
 
 .message-content {

@@ -218,6 +218,12 @@ export default {
             this.d3render() // 重新渲染图
             this.stateInit()
           }
+        },
+        {
+          title: '成语详解',
+          action:(elm,d)=>{
+            this.$router.push("/chengyudt?id=13301");
+          }
         }
       ],
       temp: {}, // 临时存储编辑时的节点信息
@@ -669,7 +675,7 @@ export default {
           }
         })
         .on('contextmenu', d3.contextMenu(this.menu))
-        // .on('contextmenu', function (d, i) {
+        // .on('context ', function (d, i) {
         //   // 阻止默认右键菜单的弹出
         //   d3.event.preventDefault()
 

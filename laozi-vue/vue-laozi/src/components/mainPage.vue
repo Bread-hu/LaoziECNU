@@ -20,7 +20,7 @@
           <p class="text_mode_1" style="font-size: 20px;float: top ">古籍核心文献</p>
         </div>
         <div class="div_block" >
-          <p class="text_mode">时空间GIS</p>
+          <p class="text_mode">古籍GIS</p>
           <p class="text_mode_1" style="font-size: 20px;float: top ">作者古籍时空间变化</p>
         </div>
         <div class="div_block" >

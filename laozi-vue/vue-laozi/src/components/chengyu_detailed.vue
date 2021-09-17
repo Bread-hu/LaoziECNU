@@ -39,8 +39,10 @@
               <span class="tip">近义</span>
               {{chengyu_content.similar}}
             </p>
+<!--            <span><a href="">aaa</a></span>-->
           </div>
         </div>
+
       </el-main>
     </el-container>
   </el-container>

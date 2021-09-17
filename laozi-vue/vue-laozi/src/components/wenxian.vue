@@ -32,10 +32,10 @@
           <div class="divbg">
             <div class="mcon" style="margin-top: 10px;text-align:center;margin:0 auto">
               <div v-for="item in show_book_list" :key="item.book_name" :index="item.book_name" style="height:auto;text-align: left;margin-top: 20px;background-color:#F0EFE2">
-                <img src="../assets/laozi_book.jpg" style="width: auto; float: left;vertical-align:middle;margin-top: 20px" />
+<!--                <img src="../assets/laozi_book.jpg" style="width: auto; float: left;vertical-align:middle;margin-top: 20px" />-->
 <!--                <div style="display: inline-block;vertical-align: top;">-->
                   <el-button type="text" style="font-size: 20px;display: block;font-color: 	#000000;font-weight:bold" @click="getBook(item.book_name)">{{item.book_name}}</el-button>
-                  <p style="font-size: 14px;width: 100%;margin: 0;">《史记》是由司马迁撰写的中国第一部纪传体通史。记载了上自上古传说中的黄帝时代，下至汉武帝元狩元年间共3000多年的历史（哲学、政治、经济、军事等）。《史记》最初没有固定书名，或称“太史公书”，或称“太史公传”，也省称“太史公”。“史记”本是古代史书通称，从三国时期开始，“史记”由史书的通称逐渐成为“太史公书”的专称。《史记》与后来的《汉书》（班固）、《后汉书》（范晔、司马彪）、《三国志》（陈寿）合称“前四史”。刘向等人认为此书“善序事理，辩而不华，质而不俚”。与司马光的《资治通鉴》并称“史学双璧”。刘向等人认为此书“善序事理，辩而不华，质而不俚”。与司马光的《资治通鉴》并称“史学双璧”</p>
+                  <p style="font-size: 14px;width: 100%;margin: 0;" v-html="item.introduction">{{item.introduction}}</p>
 <!--                </div>-->
 
               </div>

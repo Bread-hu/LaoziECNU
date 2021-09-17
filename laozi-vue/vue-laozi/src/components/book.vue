@@ -13,12 +13,12 @@
             <hr>
             <p class="ind2" style="text-align: left;font-size: 20px;display: block">
               <span class="tip">朝代</span>
-              {{book_content.dynasty}}
+              <span>{{book_content.dynasty}}</span>
             </p>
-            <p class="ind2" style="text-align: left;font-size: 20px;display: block">
+            <div class="ind2" style="text-align: left;font-size: 20px;display: block">
               <span class="tip">简介</span>
-              {{book_content.introduction}}
-            </p>
+              <span v-html="book_content.introduction"></span>
+            </div>
 <!--            <p class="ind2" style="text-align: left;font-size: 20px;display: block">-->
 <!--              <span class="tip">章节</span>-->
 <!--              -->

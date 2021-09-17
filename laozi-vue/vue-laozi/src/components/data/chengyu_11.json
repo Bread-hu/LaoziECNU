@@ -1,0 +1,1875 @@
+[
+    {
+        "p": {
+            "start": {
+                "identity": "auth1",
+                "labels": [
+                    "Author"
+                ],
+                "properties": {
+                    "name": "老子"
+                }
+            },
+            "end": {
+                "identity": "book1",
+                "labels": [
+                    "Book"
+                ],
+                "properties": {
+                    "name": "老子"
+                }
+            },
+            "segments": [
+                {
+                    "start": {
+                        "identity": "auth1",
+                        "labels": [
+                            "Author"
+                        ],
+                        "properties": {
+                            "name": "老子",
+                            "birth": "春秋末期"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "auth1",
+                        "end": "book1",
+                        "type": "write",
+                        "properties": {
+                            "name": "作者"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom0",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "玄之又玄",
+                            "explan": "形容非常奥妙，不易理解。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom0",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom1",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "有无相生",
+                            "explan": "有和无是可以相互转化的。也指矛盾双方的对立与转化，阴阳相生的关系。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom1",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom2",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "功成不居",
+                            "explan": "任其自然存在，不去占为己有。后形容立了功而不把功劳归于自己。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom2",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom3",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "和光同尘",
+                            "explan": "指不露锋芒，与世无争的平和处世方法。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom3",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom4",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "天地不仁",
+                            "explan": "天地无私，在天地看来，万物都是一样的，没什么区别。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom4",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom5",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "天长地久",
+                            "explan": "形容时间悠久。也形容永远不变（多指爱情）。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom5",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom6",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "上善若水",
+                            "explan": "最高境界，就像水的品性一样，泽被万物而不争名利。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom6",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom7",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "金玉满堂",
+                            "explan": "形容财富极多，也形容学识丰富。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom7",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom8",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "功成身退",
+                            "explan": "大功告成之后，自行隐退，不再做官或复出。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom8",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom9",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "目迷五色",
+                            "explan": "形容颜色既多又杂，因而看不清。比喻事物措综复杂，不易分辨清楚。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom9",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom10",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "宠辱若惊",
+                            "explan": "形容人非常计较得失，以小失大，患得患失，无论受到宠爱或受到侮辱都好像受到惊恐。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom10",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom11",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "视而不见",
+                            "explan": "指不注意，不重视，睁着眼却没看见。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom11",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom12",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "听而不闻",
+                            "explan": "听到了就像没听到一样。形容漠不关心，不在意。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom12",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom13",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "涣然冰释",
+                            "explan": "象冰遇热消融一般。形容疑虑、误会、隔阂等完全消除。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom13",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom14",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "虚怀若谷",
+                            "explan": "意指胸怀像山谷那样深而且宽广，形容十分谦虚。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom14",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom15",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "绝圣弃智",
+                            "explan": "指把头脑中的权威概念消灭掉，让自己不迷信任何人的观点，抛弃自作聪明自以为正确的主观性见解。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom15",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom16",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "少私寡欲",
+                            "explan": "减少私欲之意。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom16",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom17",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "相差无几",
+                            "explan": "指二者距离不远，或差别不大。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom17",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom18",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "如登春台",
+                            "explan": "春台:美好的旅游、观光的地方，比喻极好的生活环境。好象生活在幸福的太平世界里。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom18",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom19",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "飘风骤雨",
+                            "explan": "指来势急遽而猛烈的风雨。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom19",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom20",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "余食赘行",
+                            "explan": "余食，即剩饭；赘，即多余；行，古多作形解。比喻遭人讨厌的东西。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom20",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom21",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "天大地大",
+                            "explan": "形容极大。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom21",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom22",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "道法自然",
+                            "explan": "指大道以其自身为原则，自由不受约束。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom22",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom23",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "知白守黑",
+                            "explan": "意思是对是非黑白，虽然明白，还当保持暗昧，如无所见。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom23",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom24",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "去甚去泰",
+                            "explan": "指做事不能太过分。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom24",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom25",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "天道好还",
+                            "explan": "天道：天理；好：常常会；还：回报别人。指天可主持公道，善恶终有报应。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom25",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom26",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "佳兵不祥",
+                            "explan": "意为好用兵是不吉利的，即好战非祥事。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom26",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom27",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "知止不殆",
+                            "explan": "指懂得适可而止就不会遇到危险。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom27",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom28",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "自知之明",
+                            "explan": "指了解自己的情况，能正确认识自己的长处与短处。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom28",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom29",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "淡而无味",
+                            "explan": "泛指菜肴清淡无味。亦形容说话、写文章内容平淡，无趣味。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom29",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom30",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "将夺固与",
+                            "explan": "固，同“姑”。要想得到，必先给予。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom30",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom31",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "无中生有",
+                            "explan": "指本来没有却硬说有。现形容凭空捏造。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom31",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom32",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "若存若亡",
+                            "explan": "有时记在心里，有时则忘记掉。用以形容若有若无，难以捉摸。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom32",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom33",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "大器晚成",
+                            "explan": "越是大才能的人通常越晚成功。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom33",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom34",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "大音希声",
+                            "explan": "指最大最美的声音乃无声之音。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom34",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom35",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "知足不辱",
+                            "explan": "懂得满足才不会受到屈辱。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom35",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom36",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "大巧若拙",
+                            "explan": "指真正灵巧的人看起来很简单。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom36",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom37",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "知足常乐",
+                            "explan": "自知满足则心常快乐"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom37",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom38",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "出生入死",
+                            "explan": "原意是从出生到死去。后形容冒着生命危险。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom38",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom39",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "祸福相依",
+                            "explan": "是比喻坏事可以引出好的结果，好事也可以引出坏的结果。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom39",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom40",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "根深蒂固",
+                            "explan": "比喻根基深厚牢固；不可动摇。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom40",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom41",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "以德报怨",
+                            "explan": "指用道德公正的眼光看待与别人的仇恨。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom41",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom42",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "轻诺寡信",
+                            "explan": "轻易答应人家要求的，一定很少守信用。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom42",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom43",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "千里之行，始于足下",
+                            "explan": "谓走一千里路，也是从迈第一步开始的。比喻事情是从头做起，逐步进行的。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom43",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom44",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "慎终如始",
+                            "explan": "谨慎收尾，如同开始时一样。指始终要谨慎从事。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom44",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom45",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "俭故能广",
+                            "explan": "指平素俭省，所以能够富裕。又解为行事简单方可广博，俭，同“简”。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom45",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom46",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "寸进尺退",
+                            "explan": "指得到的少而失去的多，即得不偿失。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom46",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom47",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "被褐怀玉",
+                            "explan": "身穿粗布衣服而怀抱美玉。比喻虽是贫寒出身，但有真才实学。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom47",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom48",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "天网恢恢，疏而不漏",
+                            "explan": "比喻作恶的人终究逃脱不了天法的惩处。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom48",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom49",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "小国寡民",
+                            "explan": "国家小，人民少。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom49",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom50",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "鸡犬相闻",
+                            "explan": "鸡鸣狗吠的声音都能听到，指人烟稠密。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom50",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom51",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "老死不相往来",
+                            "explan": "指彼此不联系，不交流情况。"
+                        }
+                    },
+                    "end": {
+                        "identity": "book1",
+                        "labels": [
+                            "Book"
+                        ],
+                        "properties": {
+                            "name": "《老子》"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom51",
+                        "end": "book1",
+                        "type": "from",
+                        "properties": {
+                            "name": "出自"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]

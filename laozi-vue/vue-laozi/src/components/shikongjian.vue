@@ -28,6 +28,7 @@ export default {
     },
   },
   data(){
+    return{}
   },
   mounted() {
     this.setMapData();
@@ -44,9 +45,10 @@ export default {
           // formatter详细配置： https://echarts.baidu.com/option.html#tooltip.formatter
           formatter(params, ticket, callback) {
             // params.data 就是series配置项中的data数据遍历
-            let localValue, perf, downloadSpeep, usability, point;
+            let localValue, perf, downloadSpeep, usability, point,year;
             if (params.data) {
               localValue = params.data.idiom;
+              year = params.data.value[2];
               // perf = params.data.perf;
               // downloadSpeep = params.data.downloadSpeep;
               // usability = params.data.usability;
@@ -59,7 +61,8 @@ export default {
             let htmlStr = `
           <div style='font-size:18px;'> ${params.name}</div>
           <p style='text-align:left;margin-top:-4px;'>
-              成语：${localValue}<br/>
+              古籍：${localValue}<br/>
+              年代:${year}<br/>
           </p>
         `;
             return htmlStr;

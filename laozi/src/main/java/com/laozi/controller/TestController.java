@@ -2,7 +2,6 @@ package com.laozi.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.laozi.entity.daodejing.Daodejing;
-import com.laozi.entity.daodejing.DaodejingIdiom;
 import com.laozi.service.BookService;
 import com.laozi.service.ChengYuService;
 import com.laozi.service.DaodejingService;
@@ -44,6 +43,11 @@ public class TestController {
     ChengYuService chengYuService;
     @Autowired
     BookService bookService;
+
+//    @Autowired
+//    TestService testService;
+
+
 
     //把成语和它url放es中
     @Test

@@ -41,7 +41,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     border: none;
-    background: url(../images/icon-arrow-index.png) no-repeat scroll 98% center
+    background: url(../img/icon-arrow-index.png) no-repeat scroll 98% center
     #fff;
 }
 .search .search-box input{
@@ -60,7 +60,7 @@
     height:32px;
     margin-top:10px;
     margin-right:10px;
-    background:url(../images/search.png) no-repeat;
+    background:url(../img/search.png) no-repeat;
     vertical-align: middle;
 }
 .banner .search a.advanced-search-btn {
@@ -96,7 +96,7 @@
 .list .list-title{
     width:100%;
     padding-bottom:10px;
-    background:url(../images/icon-line.png) no-repeat bottom;
+    background:url(../img/icon-line.png) no-repeat bottom;
 }
 .list-title p{
     float:left;

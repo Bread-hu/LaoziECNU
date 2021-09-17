@@ -54,7 +54,7 @@ export default {
         {name: "成语", path: "/chengyu"},
         {name: "作者", path: "/zuozhe"},
         {name: "文献", path: "/wenxian"},
-        {name: "时空间GIS", path: "/shikongjian"},
+        {name: "古籍GIS", path: "/shikongjian"},
         {name: "知识图谱", path: "/zhishitupu"},
         {name: "道德经", path: "/daodejing"},
       ]

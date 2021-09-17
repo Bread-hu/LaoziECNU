@@ -1,0 +1,110 @@
+[
+{
+        "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom0",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "根深蒂固",
+                            "explan": "比喻基础深厚，不容易动摇。"
+                        }
+                    },
+                    "end": {
+                        "identity": "Idiom1",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "坚不可摧",
+                            "explan": "坚：坚固；摧：摧毁。非常坚固，摧毁不了。"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom0",
+                        "end": "Idiom1",
+                        "type": "近义",
+                        "properties": {
+                            "name": "近义"
+                        }
+                    }
+                }
+            ]
+        }
+   },
+   {
+            "p": {
+            "segments": [
+                {
+                    "start": {
+                        "identity": "Idiom0",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "根深蒂固",
+                          "explan": "比喻基础深厚，不容易动摇。"
+                        }
+                    },
+                    "end": {
+                        "identity": "Idiom2",
+                        "labels": [
+                            "Idiom"
+                        ],
+                        "properties": {
+                            "name": "积重难返",
+                          "explan": "重：程度深；返：回转。经过长时间形成的思想作风或习惯，很难改变。"
+                        }
+                    },
+                    "relationship": {
+                        "start": "Idiom0",
+                        "end": "Idiom2",
+                        "type": "近义",
+                        "properties": {
+                            "name": "近义"
+                        }
+                    }
+                }
+            ]
+        }
+   },
+  {
+    "p": {
+      "segments": [
+        {
+          "start": {
+            "identity": "Idiom0",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "根深蒂固",
+              "explan": "比喻基础深厚，不容易动摇。"
+            }
+          },
+          "end": {
+            "identity": "Idiom3",
+            "labels": [
+              "Idiom"
+            ],
+            "properties": {
+              "name": "摇摇欲坠",
+              "explan": "摇摇：摇动，摇晃；坠：落下。形容十分危险，很快就要掉下来，或不稳固，很快就要垮台。"
+            }
+          },
+          "relationship": {
+            "start": "Idiom0",
+            "end": "Idiom3",
+            "type": "反义",
+            "properties": {
+              "name": "反义"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

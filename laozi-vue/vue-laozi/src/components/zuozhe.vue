@@ -42,7 +42,7 @@
         <div class="divbg">
           <div class="mcon" style="margin-top: 10px;text-align:center;margin:0 auto">
         <div v-for="item in author_list" :key="item.author_name" style="background-color: #F0EFE2;height: auto;text-align: left;margin-top: 20px;width: auto;">
-          <img src="../assets/laozi_1.jpg" style="height: 15vh;width: auto; display: inline-block;" />
+          <img :src="item.author_pic" style="height: 15vh;width: auto; display: inline-block;" />
           <div style="display: inline-block; vertical-align: top">
 <!--            <a href="laozi">{{ item.author_name }}</a>-->
             <el-button type="text" style="font-size: 20px" @click="getAuthorContent(item.author_name)">{{item.author_name}}</el-button>
@@ -81,7 +81,7 @@ export default {
   data() {
     return {
       now_page: 1,
-      now_dynasty: "先秦",
+      now_dynasty: "不限",
       max_page:0,
       current_page:0,
       ishow:1,
@@ -97,7 +97,7 @@ export default {
       ],
       dynasty_list: [
         { name: "不限", maxPage:50, index:"1"},
-        { name: "先秦", maxPage:20, index:"2"},
+        { name: "先秦", maxPage:2, index:"2"},
         { name: "两汉", maxPage:10, index:"3"},
         { name: "晋魏", maxPage:3, index:"4"},
         { name: "南北朝", maxPage:5, index:"5"},
@@ -160,7 +160,7 @@ export default {
         }
         that.dynasty_list[0].maxPage = count
         console.log(that.dynasty_list)
-        that.getAuthor("先秦",1)
+        that.getAuthor("不限",1)
       },
       function (err) {
         console.log(err);
@@ -188,7 +188,7 @@ export default {
     getAuthor(dynasty,num){
       var that = this;
       that.current_page = num
-
+      console.log(num)
       this.axios({
         url: "/page",
         method: "post",
@@ -199,6 +199,9 @@ export default {
       }).then(
         function (response){
           that.author_list = response.data.authors
+          for(var i=0;i<that.author_list.length;i++){
+            that.author_list[i].author_pic = "http://localhost:8080" + that.author_list[i].author_pic
+          }
           console.log(that.author_list)
         },
         function (err) {

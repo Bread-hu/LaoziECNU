@@ -109,7 +109,8 @@
               <el-button type="text" v-on:click="toOriginal">查看原文</el-button>
             </div>
             <div>
-              {{ idiom_from }}
+              <el-button type="text" v-on:click="toIdiom">{{ idiom_from }}</el-button>
+<!--              <el-button type="text" v-on:click="toIdiom">和光同尘</el-button>-->
             </div>
           </el-card>
         </template>
@@ -306,6 +307,9 @@ export default {
     }
   },
   methods: {
+    toIdiom(){
+        this.$router.push("/chengyudt?id=19979");
+    },
     searchChapter(item) {
       this.ok = true;
       this.title = item.name;
@@ -349,7 +353,7 @@ export default {
       var that = this
       this.axios({
         url: "/daodejing/selectLanguage",
-        method: 'post',
+        method: 'get',
         params: {language: language}
       }).then(
         function (response) {
